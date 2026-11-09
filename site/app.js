@@ -408,6 +408,13 @@
     ocioso(atualizar, 1500);
   });
 
+  // ---------- 404: busca já com as palavras do link quebrado ----------
+  const busca404 = $('[data-busca-404] input');
+  if (busca404) {
+    const ultimo = decodeURIComponent(location.pathname).split('/').filter(Boolean).pop() || '';
+    busca404.value = ultimo.replace(/[-_]+/g, ' ').replace(/\b(perfumes?|html?)\b/gi, '').replace(/\s+/g, ' ').trim();
+  }
+
   // ---------- revelação no scroll (só transform e opacity) ----------
   if (!reduzir && 'IntersectionObserver' in window) ocioso(() => {
     const alvos = $$('.faixa__topo, .marcas__topo, .marcas__lista, .passos, .duvidas h2, .linha__txt');

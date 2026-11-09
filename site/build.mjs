@@ -411,7 +411,18 @@ ${parecidos.length + completa.length ? faixa(parecidos.length ? `Mais de ${esc(p
 // ---------- 404, sitemap, robots, favicon ----------
 await writeFile(join(DIST, '404.html'), pagina({
   titulo: 'Página não encontrada | Iguassu de Parfum', descricao: 'Esta página não existe mais.', caminho: '/404', css: CSS, js: JS,
-  conteudo: `<section class="nao-achou">${SIMBOLO}<h1>Essa página não existe</h1><p>O perfume pode ter saído do catálogo. Veja os outros ou fale com a gente.</p><div class="hero__btns"><a class="btn btn--escuro" href="/perfumes/">Ver perfumes</a><a class="btn btn--contorno-escuro" href="${linkWhats('Olá, Iguassu! Vim pelo site e não achei um perfume.')}" target="_blank" rel="noopener">Falar no WhatsApp</a></div></section>`,
+  conteudo: `<section class="nao-achou">
+  <p class="nao-achou__num" aria-hidden="true">4<span>${SIMBOLO}</span>4</p>
+  <h1>Esse perfume saiu da prateleira</h1>
+  <p>O link pode estar errado ou o perfume não está mais no catálogo. Procure pelo nome, que a gente acha o mais parecido.</p>
+  <form class="nao-achou__busca" action="/perfumes/" method="get" role="search" data-busca-404>
+    <label class="sr" for="busca-404">Buscar perfume</label>
+    <input id="busca-404" name="busca" type="search" placeholder="Nome do perfume ou marca" autocomplete="off">
+    <button class="btn btn--escuro" type="submit">${ICONES.busca}<span>Buscar</span></button>
+  </form>
+  <nav class="nao-achou__atalhos" aria-label="Atalhos"><a href="/arabes/">Árabes</a><a href="/importados/">Importados</a><a href="/marcas/">Marcas</a><a href="${linkWhats('Olá, Iguassu! Vim pelo site e não achei um perfume.')}" target="_blank" rel="noopener">Perguntar no WhatsApp</a></nav>
+</section>
+${faixa('Enquanto isso, os mais pedidos', 'Árabes', destaques, '/arabes/', 'mais-pedidos-404')}`,
 }).replace(/data-catalogo=""/g, `data-catalogo="${CATALOGO}"`));
 
 const urls = ['/', '/perfumes/', '/arabes/', '/importados/', '/marcas/', ...marcas.map((m) => `/marca/${m.slug}/`), ...produtos.map((p) => `/perfume/${p.slug}/`)];

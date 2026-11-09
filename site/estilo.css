@@ -502,10 +502,21 @@ svg.ico-cheio { fill: currentColor; stroke: none; }
 }
 .produto + .faixa { padding-top: 40px; }
 
-.nao-achou { max-width: 640px; margin: 0 auto; padding: 96px var(--borda-in); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.nao-achou .simbolo { width: 34px; height: 64px; stroke: var(--ouro); stroke-width: 1.1; }
-.nao-achou h1 { font-size: 40px; font-weight: 300; }
-.nao-achou p { color: var(--tinta-2); }
+.nao-achou { max-width: 720px; margin: 0 auto; padding: 72px var(--borda-in) 56px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.nao-achou__num { display: flex; align-items: center; gap: .08em; font-size: clamp(96px, 18vw, 168px); font-weight: 300; line-height: 1; color: var(--ouro); letter-spacing: .02em; margin: 0 0 6px; }
+.nao-achou__num span { display: inline-flex; width: .42em; height: .8em; }
+.nao-achou__num .simbolo { width: 100%; height: 100%; stroke: var(--ouro); stroke-width: 1; fill: none; }
+.nao-achou h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 300; }
+.nao-achou p:not(.nao-achou__num) { color: var(--tinta-2); max-width: 520px; }
+.nao-achou__busca { display: flex; width: 100%; max-width: 520px; margin-top: 8px; }
+.nao-achou__busca input { flex: 1; min-width: 0; min-height: 52px; padding: 0 18px; border: 1px solid var(--tinta); border-right: 0; background: #fff; font: inherit; font-size: 16px; border-radius: 0; }
+.nao-achou__busca input:focus { outline: none; box-shadow: inset 0 0 0 1px var(--ouro); }
+.nao-achou__busca .btn { min-height: 52px; gap: 8px; }
+.nao-achou__busca .btn svg { width: 17px; height: 17px; }
+.nao-achou__atalhos { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin-top: 6px; }
+.nao-achou__atalhos a { font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; padding: 6px 0; border-bottom: 1px solid var(--ouro); }
+.nao-achou__atalhos a:hover { color: var(--ouro-texto); }
+@media (max-width: 520px) { .nao-achou__busca .btn span { display: none; } .nao-achou__busca .btn { padding: 0 18px; } }
 
 /* ---------- seções fora da tela só são calculadas quando chegam perto ---------- */
 /* o tamanho reservado é só do conteúdo (sem padding); link de âncora liga .cv-pronto antes de rolar */
