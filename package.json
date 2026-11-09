@@ -1,0 +1,23 @@
+{
+  "name": "0103-iguassu",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "site": "node --env-file-if-exists=.env.local site/build.mjs",
+    "site:arquivo": "node site/build.mjs --arquivo",
+    "servir": "node scripts/servir.mjs site/dist 8790",
+    "banco:migrar": "node --env-file=.env.supabase.local scripts/aplicar-migracao.mjs",
+    "banco:sql": "node --env-file=.env.supabase.local scripts/rodar-sql.mjs",
+    "catalogo:subir": "node --env-file=.env.local scripts/subir-catalogo.mjs",
+    "fotos": "python scripts/preparar-fotos.py",
+    "raspar:precos": "node scripts/raspar-referencia.mjs --so-precos"
+  },
+  "devDependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "esbuild": "^0.28.2",
+    "sharp": "^0.35.5"
+  }
+}

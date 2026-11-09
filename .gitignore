@@ -1,0 +1,6 @@
+dados/fotos-originais/
+node_modules/
+dist/
+.env*.local
+.convites/
+site/publico/img/p/

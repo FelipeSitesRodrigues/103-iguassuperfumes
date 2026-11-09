@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f0f0f">
+<title>Painel | Iguassu de Parfum</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fontes/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="__CSS__">
+</head>
+<body>
+
+<!-- entrar -->
+<main class="entrar" id="entrar" hidden>
+  <form class="entrar__caixa" id="form-entrar" novalidate>
+    <div class="marca-painel">__SIMBOLO__<span><b>IGUASSU</b><small>PAINEL</small></span></div>
+    <h1>Entrar no painel</h1>
+    <label class="campo"><span>E-mail</span><input type="email" name="email" autocomplete="username" required></label>
+    <label class="campo"><span>Senha</span><input type="password" name="senha" autocomplete="current-password" required></label>
+    <p class="erro" id="erro-entrar" role="alert" hidden></p>
+    <button class="botao botao--cheio" type="submit">Entrar</button>
+  </form>
+</main>
+
+<!-- painel -->
+<div class="app" id="app" hidden>
+  <header class="barra">
+    <div class="marca-painel">__SIMBOLO__<span><b>IGUASSU</b><small>PAINEL</small></span></div>
+    <button class="status" type="button" id="status" data-estado="carregando" title="">
+      <span class="status__ponto" aria-hidden="true"></span><span class="status__txt">Conferindo o site…</span>
+    </button>
+    <a class="barra__link" href="/" target="_blank" rel="noopener">Ver site</a>
+    <button class="barra__link" type="button" id="sair">Sair</button>
+  </header>
+  <nav class="abas" aria-label="Seções">
+    <button type="button" data-aba="perfumes" aria-current="page">Perfumes</button>
+    <button type="button" data-aba="destaques">Destaques</button>
+    <button type="button" data-aba="loja">Loja</button>
+  </nav>
+
+  <!-- perfumes -->
+  <section class="secao" id="aba-perfumes">
+    <div class="secao__topo">
+      <div>
+        <h1>Perfumes</h1>
+        <p class="secao__sub" id="contagem"></p>
+      </div>
+      <button class="botao botao--cheio" type="button" id="novo">+ Novo perfume</button>
+    </div>
+    <div class="filtros">
+      <label class="busca-painel"><span class="sr">Buscar</span><input type="search" id="busca" placeholder="Buscar por nome ou marca" autocomplete="off"></label>
+      <div class="chips" role="group" aria-label="Filtrar">
+        <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button type="button" data-filtro="arabe" aria-pressed="false">Árabes</button>
+        <button type="button" data-filtro="importado" aria-pressed="false">Importados</button>
+        <button type="button" data-filtro="esgotado" aria-pressed="false">Esgotados</button>
+        <button type="button" data-filtro="oculto" aria-pressed="false">Ocultos</button>
+        <button type="button" data-filtro="semfoto" aria-pressed="false">Sem foto</button>
+      </div>
+    </div>
+    <ul class="lista" id="lista"></ul>
+    <button class="botao botao--linha mais" type="button" id="mais" hidden>Mostrar mais</button>
+  </section>
+
+  <!-- destaques -->
+  <section class="secao" id="aba-destaques" hidden>
+    <div class="secao__topo">
+      <div>
+        <h1>Destaques da home</h1>
+        <p class="secao__sub">A ordem daqui é a ordem das faixas "Os mais pedidos" e "Importados em destaque".</p>
+      </div>
+      <button class="botao botao--cheio" type="button" id="salvar-destaques" disabled>Salvar ordem</button>
+    </div>
+    <div class="destaques">
+      <div class="destaque-col" data-linha="arabe">
+        <h2>Os mais pedidos <small>árabes</small></h2>
+        <ol class="ordem"></ol>
+        <label class="busca-painel busca-painel--add"><span class="sr">Adicionar árabe</span><input type="search" placeholder="+ Adicionar perfume árabe" autocomplete="off"></label>
+        <ul class="sugestoes"></ul>
+      </div>
+      <div class="destaque-col" data-linha="importado">
+        <h2>Importados em destaque <small>grifes</small></h2>
+        <ol class="ordem"></ol>
+        <label class="busca-painel busca-painel--add"><span class="sr">Adicionar importado</span><input type="search" placeholder="+ Adicionar importado" autocomplete="off"></label>
+        <ul class="sugestoes"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- loja -->
+  <section class="secao" id="aba-loja" hidden>
+    <div class="secao__topo">
+      <div>
+        <h1>Dados da loja</h1>
+        <p class="secao__sub">Aparecem no site inteiro: número dos pedidos, Instagram, aviso do topo e banner.</p>
+      </div>
+    </div>
+    <form class="loja" id="form-loja" novalidate>
+      <div class="grade-2">
+        <label class="campo"><span>WhatsApp dos pedidos</span><input name="whatsapp" inputmode="tel" placeholder="(45) 98811-0629" required><small>Os pedidos da sacola chegam nesse número.</small></label>
+        <label class="campo"><span>Instagram</span><input name="instagram" placeholder="@iguassudeparfum" autocomplete="off"><small>Deixe vazio pra não mostrar.</small></label>
+      </div>
+      <label class="campo"><span>Aviso no topo do site</span><input name="faixa_topo" maxlength="120" required></label>
+      <div class="banners">
+        <div class="banner-campo" data-banner="banner_desktop">
+          <span class="campo__rot">Banner do computador</span>
+          <div class="banner-campo__previa banner-campo__previa--largo"><img alt="" data-padrao="/img/banner-960.webp"></div>
+          <small>Imagem larga, de preferência 1920 × 600. O site recorta pelo centro se vier diferente.</small>
+          <label class="botao botao--linha botao--arquivo">Trocar imagem<input type="file" accept="image/*" hidden></label>
+        </div>
+        <div class="banner-campo" data-banner="banner_mobile">
+          <span class="campo__rot">Banner do celular</span>
+          <div class="banner-campo__previa banner-campo__previa--alto"><img alt="" data-padrao="/img/banner-celular-600.webp"></div>
+          <small>Imagem em pé, de preferência 828 × 1242.</small>
+          <label class="botao botao--linha botao--arquivo">Trocar imagem<input type="file" accept="image/*" hidden></label>
+        </div>
+      </div>
+      <div class="rodape-form">
+        <p class="erro" role="alert" hidden></p>
+        <button class="botao botao--cheio" type="submit">Salvar dados da loja</button>
+      </div>
+    </form>
+  </section>
+</div>
+
+<!-- editor de perfume -->
+<dialog class="editor" id="editor" aria-labelledby="editor-titulo">
+  <form class="editor__form" id="form-perfume" novalidate>
+    <header class="editor__topo">
+      <button class="editor__fechar" type="button" data-fechar aria-label="Fechar">×</button>
+      <h2 id="editor-titulo">Novo perfume</h2>
+    </header>
+    <div class="editor__corpo">
+      <div class="fotos-campo">
+        <span class="campo__rot">Fotos <small>(a primeira é a capa)</small></span>
+        <ul class="fotos" id="fotos"></ul>
+        <label class="fotos__add">
+          <input type="file" accept="image/*" multiple hidden id="fotos-input">
+          <span aria-hidden="true">+</span>Adicionar fotos
+        </label>
+      </div>
+      <div class="grade-2">
+        <label class="campo"><span>Marca</span>
+          <select name="marca_id" required></select>
+        </label>
+        <label class="campo" id="campo-marca-nova" hidden><span>Nome da marca nova</span><input name="marca_nova" maxlength="60" autocomplete="off"></label>
+      </div>
+      <label class="campo"><span>Nome do perfume</span><input name="nome" maxlength="120" required autocomplete="off" placeholder="Ex.: Asad"><small>Sem a marca e sem o volume: eles já aparecem juntos no site.</small></label>
+      <div class="grade-2">
+        <label class="campo"><span>Linha</span>
+          <select name="linha" required><option value="arabe">Árabe</option><option value="importado">Importado</option></select>
+        </label>
+        <label class="campo"><span>Volume</span><input name="volume" maxlength="20" placeholder="100 ml" autocomplete="off"></label>
+      </div>
+      <div class="grade-2">
+        <label class="campo"><span>Preço</span><span class="dinheiro"><i>R$</i><input name="preco" inputmode="decimal" required placeholder="0,00" autocomplete="off"></span></label>
+        <label class="campo"><span>Preço promocional</span><span class="dinheiro"><i>R$</i><input name="promo" inputmode="decimal" placeholder="opcional" autocomplete="off"></span><small>O preço cheio aparece riscado.</small></label>
+      </div>
+      <label class="campo"><span>Descrição <small>(opcional)</small></span><textarea name="descricao" rows="4" maxlength="4000" placeholder="Notas, ocasião, fixação…"></textarea></label>
+      <div class="chaves">
+        <label class="chave"><input type="checkbox" name="disponivel"><span class="chave__trilho" aria-hidden="true"></span><span><b>Disponível</b><small>Desligado, aparece como esgotado</small></span></label>
+        <label class="chave"><input type="checkbox" name="visivel"><span class="chave__trilho" aria-hidden="true"></span><span><b>Aparece no site</b><small>Desligado, some do site</small></span></label>
+        <label class="chave"><input type="checkbox" name="destaque"><span class="chave__trilho" aria-hidden="true"></span><span><b>Destaque na home</b><small>Entra no fim da faixa da linha</small></span></label>
+      </div>
+    </div>
+    <footer class="editor__rodape">
+      <button class="botao botao--perigo" type="button" id="excluir">Excluir</button>
+      <p class="erro" role="alert" hidden></p>
+      <button class="botao botao--cheio" type="submit">Salvar</button>
+    </footer>
+  </form>
+</dialog>
+
+<div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+<script type="module" src="__JS__"></script>
+</body>
+</html>
