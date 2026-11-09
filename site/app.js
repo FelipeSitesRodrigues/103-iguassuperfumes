@@ -42,7 +42,8 @@
 
   function mensagem() {
     const nome = ($('[data-sacola-nome]')?.value || '').trim();
-    const linhas = itens.map((i) => `${i.qtd}x ${i.marca} ${i.nome}${i.vol ? ' ' + i.vol : ''}: ${real(i.preco * i.qtd)}`);
+    // um perfume por linha, cada um fechado por um traço (formato pedido pelo Eduardo)
+    const linhas = itens.flatMap((i) => [`${i.qtd}x ${i.marca} ${i.nome}${i.vol ? ' ' + i.vol : ''}: ${real(i.preco * i.qtd)}`, '————————————————']);
     return [
       'Olá, Iguassu! Quero fazer este pedido pelo site:',
       '',

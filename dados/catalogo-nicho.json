@@ -1,0 +1,1553 @@
+{
+  "origem": "https://atlanticostor.com.br",
+  "raspadoEm": "2026-11-09T18:37:35.982Z",
+  "total": 82,
+  "produtos": [
+    {
+      "sku": "3233353",
+      "slugOrigem": ".-amouage-gold-pour-femme-edp-100ml~3233353",
+      "nome": "AMOUAGE GOLD POUR FEMME EDP 100ML",
+      "marca": "Amouage",
+      "preco": 1759,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/17ecddd8197f43b7/6b5e48fb8ec8e3928ac69728ef7d717019ad7a6da574916f.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/251af530822f4ce2/6b5e48fb8ec8e3928ac69728ef7d717019ad7a6da574916f.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "AMOUAGE",
+      "fotos": [
+        "3233353-1.webp",
+        "3233353-2.webp"
+      ]
+    },
+    {
+      "sku": "3232959",
+      "slugOrigem": ".-amouage-guidance-100ml~3232959",
+      "nome": "AMOUAGE GUIDANCE 100ML",
+      "marca": "Amouage",
+      "preco": 2650,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2cd39c9596144402/79c0a66415fcae3aef707b44148534ec138863ba62b6f34c.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2b5366c83de94e23/79c0a66415fcae3aef707b44148534ec138863ba62b6f34c.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "AMOUAGE",
+      "fotos": [
+        "3232959-1.webp",
+        "3232959-2.webp"
+      ]
+    },
+    {
+      "sku": "3233499",
+      "slugOrigem": ".-amouage-guidance-46-extrait-de-parfum-100ml~3233499",
+      "nome": "AMOUAGE GUIDANCE 46 EXTRAIT DE PARFUM 100ML",
+      "marca": "Amouage",
+      "preco": 3199,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/8d384651a43a48d0/548dbbac11f48007ea368bcf3f6006cfaed6edeaf3c38810.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a1e1aa4623844835/548dbbac11f48007ea368bcf3f6006cfaed6edeaf3c38810.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "AMOUAGE",
+      "fotos": [
+        "3233499-1.webp",
+        "3233499-2.webp"
+      ]
+    },
+    {
+      "sku": "3233350",
+      "slugOrigem": ".-amouage-interlude-pour-femme-edp-100ml~3233350",
+      "nome": "AMOUAGE INTERLUDE POUR FEMME EDP 100ML",
+      "marca": "Amouage",
+      "preco": 1639,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/3f80dfed170d40c8/61c653eb4c1d45e2319ac0eab8ec3aa518811e6b37814851.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2537e7f7d28149a6/61c653eb4c1d45e2319ac0eab8ec3aa518811e6b37814851.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "AMOUAGE",
+      "fotos": [
+        "3233350-1.webp",
+        "3233350-2.webp"
+      ]
+    },
+    {
+      "sku": "3233352",
+      "slugOrigem": ".-tester-amouage-gold-pour-femme-edp-100ml~3233352",
+      "nome": "TESTER AMOUAGE GOLD POUR FEMME EDP 100ML",
+      "marca": "Amouage",
+      "preco": 1800,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/23388230d75542dd/042e26e39b9368c1e2a7a5d63c35144c5b81843f002b22e8.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/75eee41a231f416d/042e26e39b9368c1e2a7a5d63c35144c5b81843f002b22e8.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "AMOUAGE",
+      "fotos": [
+        "3233352-1.webp",
+        "3233352-2.webp"
+      ]
+    },
+    {
+      "sku": "3233351",
+      "slugOrigem": ".-tester-amouage-interlude-edp-100ml~3233351",
+      "nome": "TESTER AMOUAGE INTERLUDE EDP 100ML",
+      "marca": "Amouage",
+      "preco": 1800,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f9dccada7340442d/639c21603c7963f5a338252126516d7db8f7a6ec89db26aa.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/6c79b989483a4dd6/639c21603c7963f5a338252126516d7db8f7a6ec89db26aa.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "AMOUAGE",
+      "fotos": [
+        "3233351-1.webp",
+        "3233351-2.webp"
+      ]
+    },
+    {
+      "sku": "3233307",
+      "slugOrigem": ".-bdk-gris-charnel-edp-100ml~3233307",
+      "nome": "BDK GRIS CHARNEL EDP 100ML",
+      "marca": "Bdk Parfums",
+      "preco": 1499,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/6053f8452fff47e9/4c22d681d98cdd11720878e6e01d77f026946adb0f19c8c5.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/1d7e609296d74364/4c22d681d98cdd11720878e6e01d77f026946adb0f19c8c5.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "BDK PARFUMS",
+      "fotos": [
+        "3233307-1.webp",
+        "3233307-2.webp"
+      ]
+    },
+    {
+      "sku": "3233297",
+      "slugOrigem": ".-bdk-pas-ce-soir-edp-100ml~3233297",
+      "nome": "BDK PAS CE SOIR EDP 100ML",
+      "marca": "Bdk Parfums",
+      "preco": 1389,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/fe269c452ed14377/c60a440b4df5e31c37bff9c638cba557b61e8024ba1d4d62.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/0308b2ea5baa4dad/c60a440b4df5e31c37bff9c638cba557b61e8024ba1d4d62.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "BDK PARFUMS",
+      "fotos": [
+        "3233297-1.webp",
+        "3233297-2.webp"
+      ]
+    },
+    {
+      "sku": "3233308",
+      "slugOrigem": ".-bdk-rouge-smoking-edp-100ml~3233308",
+      "nome": "BDK ROUGE SMOKING EDP 100ML",
+      "marca": "Bdk Parfums",
+      "preco": 1659,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/05e6c7fccb90466f/adaa8db48ae92e661e786ac76c52c627bb8f124929d20f16.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/e66205bc64c74150/adaa8db48ae92e661e786ac76c52c627bb8f124929d20f16.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "BDK PARFUMS",
+      "fotos": [
+        "3233308-1.webp",
+        "3233308-2.webp"
+      ]
+    },
+    {
+      "sku": "3233311",
+      "slugOrigem": ".-bdk-rouge-smoking-extrait-de-parfum-100ml~3233311",
+      "nome": "BDK ROUGE SMOKING EXTRAIT DE PARFUM 100ML",
+      "marca": "Bdk Parfums",
+      "preco": 1729,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/61976409124d4150/ef4e2c6085d1996c6a76dde65cb5b312726accdf4b007dfd.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/0e78567de6b54ca1/ef4e2c6085d1996c6a76dde65cb5b312726accdf4b007dfd.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "BDK PARFUMS",
+      "fotos": [
+        "3233311-1.webp",
+        "3233311-2.webp"
+      ]
+    },
+    {
+      "sku": "3233138",
+      "slugOrigem": ".-boadicea-the-victorious-azrak-edp-100ml~3233138",
+      "nome": "BOADICEA THE VICTORIOUS AZRAK EDP 100ML",
+      "marca": "Boadicea",
+      "preco": 1959,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a5d6b1276d344152/00bea669c6733831237c55be636fcc558b4720cd1de3f795.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/63f748525bb4459b/00bea669c6733831237c55be636fcc558b4720cd1de3f795.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "BOADICEA",
+      "fotos": [
+        "3233138-1.webp",
+        "3233138-2.webp"
+      ]
+    },
+    {
+      "sku": "3233197",
+      "slugOrigem": ".-boadicea-the-victorious-bodacious-edp-100ml~3233197",
+      "nome": "BOADICEA THE VICTORIOUS BODACIOUS EDP 100ML",
+      "marca": "Boadicea",
+      "preco": 1459,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/cd180a85e92e4b66/44241454488496c0ee214981200b0a219568a24732b21df2.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f8d6b2813fcd4af3/44241454488496c0ee214981200b0a219568a24732b21df2.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "BOADICEA",
+      "fotos": [
+        "3233197-1.webp",
+        "3233197-2.webp"
+      ]
+    },
+    {
+      "sku": "3233137",
+      "slugOrigem": ".-boadicea-the-victorious-heroine-edp-100ml~3233137",
+      "nome": "BOADICEA THE VICTORIOUS HEROINE EDP 100ML",
+      "marca": "Boadicea",
+      "preco": 1739,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/fb0e4e5b286f4c6a/878aa6f571bb21cfefce7d722b1111bbcb40659c488bd16b.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2e397629ec7646e3/878aa6f571bb21cfefce7d722b1111bbcb40659c488bd16b.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "BOADICEA",
+      "fotos": [
+        "3233137-1.webp",
+        "3233137-2.webp"
+      ]
+    },
+    {
+      "sku": "3233117",
+      "slugOrigem": ".-creed-1760-carmina-edp-75ml~3233117",
+      "nome": "CREED 1760 CARMINA EDP 75ML",
+      "marca": "Creed",
+      "preco": 1589,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/1d2b58fdf67844e2/c01dc7caab161ce6de320cd54595e58e1a945e347360574d.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/0ee2028aa06240b6/c01dc7caab161ce6de320cd54595e58e1a945e347360574d.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "CREED",
+      "fotos": [
+        "3233117-1.webp",
+        "3233117-2.webp"
+      ]
+    },
+    {
+      "sku": "3233147",
+      "slugOrigem": ".-creed-1760-himalaya-edp-100ml~3233147",
+      "nome": "CREED 1760 HIMALAYA EDP 100ML",
+      "marca": "Creed",
+      "preco": 2699,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/77e45626b51346b2/053f48b8abf252462f5e0fb0c3a9c6702629ac21445a130f.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/eeb3fc3944e94bc8/053f48b8abf252462f5e0fb0c3a9c6702629ac21445a130f.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "CREED",
+      "fotos": [
+        "3233147-1.webp",
+        "3233147-2.webp"
+      ]
+    },
+    {
+      "sku": "3232925",
+      "slugOrigem": ".-creed-1760-queen-of-silk-edp-75ml~3232925",
+      "nome": "CREED 1760 QUEEN OF SILK EDP 75ML",
+      "marca": "Creed",
+      "preco": 1659,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/057b8d6347154c87/72c088e8235d9cb1d307880099e55cc6bdb0654b04ed5473.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/6d7ad600400c425d/72c088e8235d9cb1d307880099e55cc6bdb0654b04ed5473.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "CREED",
+      "fotos": [
+        "3232925-1.webp",
+        "3232925-2.webp"
+      ]
+    },
+    {
+      "sku": "3233099",
+      "slugOrigem": ".-creed-1760-royal-water-edp-100ml~3233099",
+      "nome": "CREED 1760 ROYAL WATER EDP 100ML",
+      "marca": "Creed",
+      "preco": 1679,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/aa47c88c3f3c4404/e24262609664158e8a096e8539d67c04f0d9b91f5c5469a9.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f275689cc151449d/e24262609664158e8a096e8539d67c04f0d9b91f5c5469a9.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "CREED",
+      "fotos": [
+        "3233099-1.webp",
+        "3233099-2.webp"
+      ]
+    },
+    {
+      "sku": "3233065",
+      "slugOrigem": ".-creed-1760-silver-mountain-water-edp-100ml~3233065",
+      "nome": "CREED 1760 SILVER MOUNTAIN WATER EDP 100ML",
+      "marca": "Creed",
+      "preco": 1459,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/03f1371af99d4053/8b030dad7d9e9067d61d0dbe7f923f977240f6a6e0eb43ee.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/39b05035196943fd/8b030dad7d9e9067d61d0dbe7f923f977240f6a6e0eb43ee.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "CREED",
+      "fotos": [
+        "3233065-1.webp",
+        "3233065-2.webp"
+      ]
+    },
+    {
+      "sku": "16122",
+      "slugOrigem": ".-creed-aventus-100ml~16122",
+      "nome": "CREED AVENTUS 100ML",
+      "marca": "Creed",
+      "preco": 1999,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/5595904efc864af3/b61f3a47ded8ed775f0a3a8d45fa20c7783b2c5467be3603.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/8aaabcc6a4b64e13/b61f3a47ded8ed775f0a3a8d45fa20c7783b2c5467be3603.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "CREED",
+      "fotos": [
+        "16122-1.webp",
+        "16122-2.webp"
+      ]
+    },
+    {
+      "sku": "3232866",
+      "slugOrigem": ".-ducci-giardini-di-toscana-bianco-latte-100ml~3232866",
+      "nome": "DUCCI GIARDINI DI TOSCANA BIANCO LATTE 100ML",
+      "marca": "Ducci Giardini Di Toscana",
+      "preco": 1219,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a1f4349ec47e4459/d3b106dcd44f15628533b377e31a73ecf9ceda3fdf0855e5.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a9ab1e3e0b034edf/d3b106dcd44f15628533b377e31a73ecf9ceda3fdf0855e5.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "DUCCI GIARDINI DI TOSCANA",
+      "fotos": [
+        "3232866-1.webp",
+        "3232866-2.webp"
+      ]
+    },
+    {
+      "sku": "3233016",
+      "slugOrigem": ".-fragrance-du-bois-sirene-parfum-75ml~3233016",
+      "nome": "FRAGRANCE DU BOIS SIRENE PARFUM 75ML",
+      "marca": "Fragrance Du Bois",
+      "preco": 2300,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2fc3825097e9428d/98b824f300cd41c30eabcdb40e4a157590c747b3aad4bc1a.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/26f193165c6b4bba/98b824f300cd41c30eabcdb40e4a157590c747b3aad4bc1a.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "FRAGRANCE DU BOIS",
+      "fotos": [
+        "3233016-1.webp",
+        "3233016-2.webp"
+      ]
+    },
+    {
+      "sku": "3233699",
+      "slugOrigem": ".-initio-atomic-rose-edp-90ml~3233699",
+      "nome": "INITIO ATOMIC ROSE EDP 90ML",
+      "marca": "Initio Parfums Privés",
+      "preco": 1489,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/e10eee4e56974e42/1e2f3772bb17eb15a8825d32f5a5173c94ec5d71debe999f.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/1cc14557b21f473d/1e2f3772bb17eb15a8825d32f5a5173c94ec5d71debe999f.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "INITIO",
+      "fotos": [
+        "3233699-1.webp",
+        "3233699-2.webp"
+      ]
+    },
+    {
+      "sku": "3233005",
+      "slugOrigem": ".-initio-oud-for-greatness-edp-90ml~3233005",
+      "nome": "INITIO OUD FOR GREATNESS EDP 90ML",
+      "marca": "Initio Parfums Privés",
+      "preco": 1689,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/cde413b726274ddc/184b7c23c6fa427464815954ae13e83cd6ce5756c81e88d0.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/054dd39ccfe3401b/184b7c23c6fa427464815954ae13e83cd6ce5756c81e88d0.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "INITIO",
+      "fotos": [
+        "3233005-1.webp",
+        "3233005-2.webp"
+      ]
+    },
+    {
+      "sku": "3233349",
+      "slugOrigem": ".-initio-paragon-extrait-de-parfum-90ml~3233349",
+      "nome": "INITIO PARAGON EXTRAIT DE PARFUM 90ML",
+      "marca": "Initio Parfums Privés",
+      "preco": 1619,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2426b6b1f137491e/0df60d635088b872b4c7434c1bc95ee9bca4e1ca06811366.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/fa3062a2925145a5/0df60d635088b872b4c7434c1bc95ee9bca4e1ca06811366.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "INITIO",
+      "fotos": [
+        "3233349-1.webp",
+        "3233349-2.webp"
+      ]
+    },
+    {
+      "sku": "3233180",
+      "slugOrigem": ".-initio-rehab-extrait-90ml~3233180",
+      "nome": "INITIO REHAB EXTRAIT 90ML",
+      "marca": "Initio Parfums Privés",
+      "preco": 1559,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f467f770a322474d/81658d30cdff2b03d0dfaf50c916bbf2a1fddc3b2081b95f.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/b2a31f7f7781449f/81658d30cdff2b03d0dfaf50c916bbf2a1fddc3b2081b95f.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "INITIO",
+      "fotos": [
+        "3233180-1.webp",
+        "3233180-2.webp"
+      ]
+    },
+    {
+      "sku": "3233597",
+      "slugOrigem": ".-jo-malone-english-pear-e-freesia-cologne-100ml~3233597",
+      "nome": "JO MALONE ENGLISH PEAR E FREESIA COLOGNE 100ML",
+      "marca": "Jo Malone",
+      "preco": 919,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/4c9a3053e0334b86/cac59cc6bfef99f72bc12fda20dc55aed549233cba2caf0f.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/87a55db297f24317/cac59cc6bfef99f72bc12fda20dc55aed549233cba2caf0f.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "JO MALONE",
+      "fotos": [
+        "3233597-1.webp",
+        "3233597-2.webp"
+      ]
+    },
+    {
+      "sku": "3233081",
+      "slugOrigem": ".-kilian-angels-share-edp-50ml~3233081",
+      "nome": "KILIAN ANGELS SHARE EDP 50ML",
+      "marca": "Kilian",
+      "preco": 1589,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/d2a8c1c3086e4998/bfca7b9d9f6cd39cbf50b1473e01ca7b3285b0752ed75277.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/ff90c4fc82e14ac2/bfca7b9d9f6cd39cbf50b1473e01ca7b3285b0752ed75277.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "KILIAN",
+      "fotos": [
+        "3233081-1.webp",
+        "3233081-2.webp"
+      ]
+    },
+    {
+      "sku": "3233310",
+      "slugOrigem": "kilian-good-girl-gone-bad-edp-50ml~3233310",
+      "nome": "KILIAN GOOD GIRL GONE BAD EDP 50ML",
+      "marca": "Kilian",
+      "preco": 1609,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/915c9c232921475f/34ac5d229533265da158aac261b3112c745f078fa55f22ec.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/50899bd4f32d4d21/34ac5d229533265da158aac261b3112c745f078fa55f22ec.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "KILIAN",
+      "fotos": [
+        "3233310-1.webp",
+        "3233310-2.webp"
+      ]
+    },
+    {
+      "sku": "3233182",
+      "slugOrigem": ".-maison-crivelli-cuir-infrarouge-extrait-de-parfum-50ml~3233182",
+      "nome": "MAISON CRIVELLI CUIR INFRAROUGE EXTRAIT DE PARFUM 50ML",
+      "marca": "Maison Crivelli",
+      "preco": 1669,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/00053754488e412f/ddf60000b422c3a2cea4d0448806f6dc8c36f77de75bf48c.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/966bf9dfbe234db8/ddf60000b422c3a2cea4d0448806f6dc8c36f77de75bf48c.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "MAISON CRIVELLI",
+      "fotos": [
+        "3233182-1.webp",
+        "3233182-2.webp"
+      ]
+    },
+    {
+      "sku": "3233299",
+      "slugOrigem": ".-maison-crivelli-hibiscus-mahajad-extrait-de-parfum-100ml~3233299",
+      "nome": "MAISON CRIVELLI HIBISCUS MAHAJAD EXTRAIT DE PARFUM 100ML",
+      "marca": "Maison Crivelli",
+      "preco": 3749,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/80f9239f6cbd4e71/7a21d5f7983bf4a44a3ecc95cf3b9af758d627d684365673.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/b07ddd77d7ed4aff/7a21d5f7983bf4a44a3ecc95cf3b9af758d627d684365673.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "MAISON CRIVELLI",
+      "fotos": [
+        "3233299-1.webp",
+        "3233299-2.webp"
+      ]
+    },
+    {
+      "sku": "3232962",
+      "slugOrigem": ".-maison-crivelli-oud-maracuja-extrait-de-parfum-50ml~3232962",
+      "nome": "MAISON CRIVELLI OUD MARACUJA EXTRAIT DE PARFUM 50ML",
+      "marca": "Maison Crivelli",
+      "preco": 2229,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/94ed256ec0184c43/9109d57540e62e5dbbf623a95514d70a0a8f7761ff4db9c0.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/06a942bc9f1d4131/9109d57540e62e5dbbf623a95514d70a0a8f7761ff4db9c0.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "MAISON CRIVELLI",
+      "fotos": [
+        "3232962-1.webp",
+        "3232962-2.webp"
+      ]
+    },
+    {
+      "sku": "3233190",
+      "slugOrigem": ".-maison-crivelli-oud-stallion-extrait-de-parfum-50ml~3233190",
+      "nome": "MAISON CRIVELLI OUD STALLION EXTRAIT DE PARFUM 50ML",
+      "marca": "Maison Crivelli",
+      "preco": 1499,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/4793878544d2466d/c0a9b5044952f7f78241972dacdb4bf44098336384b72702.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/18f4ad8b87c1481c/c0a9b5044952f7f78241972dacdb4bf44098336384b72702.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "MAISON CRIVELLI",
+      "fotos": [
+        "3233190-1.webp",
+        "3233190-2.webp"
+      ]
+    },
+    {
+      "sku": "3233192",
+      "slugOrigem": ".-maison-crivelli-papyrus-moleculaire-edp-100ml~3233192",
+      "nome": "MAISON CRIVELLI PAPYRUS MOLECULAIRE EDP 100ML",
+      "marca": "Maison Crivelli",
+      "preco": 1289,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/6a9a74534175455e/49c14d88d68cbe41fb97eac4bacf6d2382793b05fa9fab63.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/479ff1ebaf154f33/49c14d88d68cbe41fb97eac4bacf6d2382793b05fa9fab63.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "MAISON CRIVELLI",
+      "fotos": [
+        "3233192-1.webp",
+        "3233192-2.webp"
+      ]
+    },
+    {
+      "sku": "3233148",
+      "slugOrigem": ".-maison-crivelli-tubereuse-astrale-extrait-de-parfum-50ml~3233148",
+      "nome": "MAISON CRIVELLI TUBEREUSE ASTRALE EXTRAIT DE PARFUM 50ML",
+      "marca": "Maison Crivelli",
+      "preco": 1789,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a53563eb699849f6/2648dfaf66e4bcf99c21dcb3522ea16652dcc298de2312d1.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/12f9f0bae2ec48c4/2648dfaf66e4bcf99c21dcb3522ea16652dcc298de2312d1.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "MAISON CRIVELLI",
+      "fotos": [
+        "3233148-1.webp",
+        "3233148-2.webp"
+      ]
+    },
+    {
+      "sku": "3233201",
+      "slugOrigem": ".-tester-maison-crivelli-safran-secret-100ml~3233201",
+      "nome": "TESTER MAISON CRIVELLI SAFRAN SECRET 100ML",
+      "marca": "Maison Crivelli",
+      "preco": 2289,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f77922287bef4e56/a680f4fe366b22018b0d96ddcb571e32cc032c58ae882c12.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/694ec54a2b0e4203/a680f4fe366b22018b0d96ddcb571e32cc032c58ae882c12.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "MAISON CRIVELLI",
+      "fotos": [
+        "3233201-1.webp",
+        "3233201-2.webp"
+      ]
+    },
+    {
+      "sku": "3233695",
+      "slugOrigem": ".-byredo-bal-d&#x27;afrique-edp-50ml~3233695",
+      "nome": "BYREDO BAL D'AFRIQUE EDP 50ML",
+      "marca": "Marca Genérica",
+      "preco": 1399,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [],
+      "disponivel": true,
+      "subcategoria": null,
+      "fotos": []
+    },
+    {
+      "sku": "3232960",
+      "slugOrigem": ".-byredo-gypsy-water-edp-100ml~3232960",
+      "nome": "BYREDO GYPSY WATER EDP 100ML",
+      "marca": "Marca Genérica",
+      "preco": 1399,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/16b4b551981d4fcf/d87a7393fc20c0a4218d9a2deda8feed03b949f9e08a5ead.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a7ecc42f8f8f4af9/d87a7393fc20c0a4218d9a2deda8feed03b949f9e08a5ead.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "BYREDO",
+      "fotos": [
+        "3232960-1.webp",
+        "3232960-2.webp"
+      ]
+    },
+    {
+      "sku": "3233451",
+      "slugOrigem": ".-byredo-mojave-ghost-edp-100ml~3233451",
+      "nome": "BYREDO MOJAVE GHOST EDP 100ML",
+      "marca": "Marca Genérica",
+      "preco": 1679,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/71e74c8ebf234bb9/32696801cdf3cdb91e5de0294b9422d02c79dd074cc84181.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/5753320bdbbb49a5/32696801cdf3cdb91e5de0294b9422d02c79dd074cc84181.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "BYREDO",
+      "fotos": [
+        "3233451-1.webp",
+        "3233451-2.webp"
+      ]
+    },
+    {
+      "sku": "3233169",
+      "slugOrigem": ".-matiere-premiere-crystal-saffron-edp-100ml~3233169",
+      "nome": "MATIERE PREMIERE CRYSTAL SAFFRON EDP 100ML",
+      "marca": "Matiere Premiere",
+      "preco": 1259,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/30af393b2b3b49fc/a7d51ef21702797ae5e379a307cd78ca8234d6219013b123.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/4003cd6f2e0949ca/a7d51ef21702797ae5e379a307cd78ca8234d6219013b123.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "MATIERE PREMIERE",
+      "fotos": [
+        "3233169-1.webp",
+        "3233169-2.webp"
+      ]
+    },
+    {
+      "sku": "3233171",
+      "slugOrigem": ".-matiere-premiere-encens-suave-edp-100ml~3233171",
+      "nome": "MATIERE PREMIERE ENCENS SUAVE EDP 100ML",
+      "marca": "Matiere Premiere",
+      "preco": 1199,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/75f78e01030d40c2/06e2920136ebebd1e9d586da858e6fa982ed6a771dad8ddf.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/497088edca0d44d3/06e2920136ebebd1e9d586da858e6fa982ed6a771dad8ddf.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "MATIERE PREMIERE",
+      "fotos": [
+        "3233171-1.webp",
+        "3233171-2.webp"
+      ]
+    },
+    {
+      "sku": "16859",
+      "slugOrigem": ".-nishane-fan-your-flames-extrait-de-parfum-100ml~16859",
+      "nome": "NISHANE FAN YOUR FLAMES EXTRAIT DE PARFUM 100ML",
+      "marca": "Nishane",
+      "preco": 1199,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/5c366e108d474417/5a4b950a4af2096c01bef8356a6dc9c04e8109d058fbd848.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/be7d7b8b92c645d2/5a4b950a4af2096c01bef8356a6dc9c04e8109d058fbd848.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "NISHANE",
+      "fotos": [
+        "16859-1.webp",
+        "16859-2.webp"
+      ]
+    },
+    {
+      "sku": "16696",
+      "slugOrigem": ".-nishane-fan-your-flames-extrait-de-parfum-50ml~16696",
+      "nome": "NISHANE FAN YOUR FLAMES EXTRAIT DE PARFUM 50ML",
+      "marca": "Nishane",
+      "preco": 940,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/e8ce0ffbbf5d4bdf/1916653dd8ab81fb8a7cb0e6d469a08cd230115077cd22a8.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/4ea1294846e4458d/1916653dd8ab81fb8a7cb0e6d469a08cd230115077cd22a8.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "NISHANE",
+      "fotos": [
+        "16696-1.webp",
+        "16696-2.webp"
+      ]
+    },
+    {
+      "sku": "3232401",
+      "slugOrigem": ".-nishane-fan-your-flames-x-extrait-de-parfum-50ml~3232401",
+      "nome": "NISHANE FAN YOUR FLAMES X EXTRAIT DE PARFUM 50ML",
+      "marca": "Nishane",
+      "preco": 1029,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/9b2f50c34f3a447e/1a4272687d83af3bae7627a16c31b93e7333a036e53eb635.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2f5d8ae53d414f48/1a4272687d83af3bae7627a16c31b93e7333a036e53eb635.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "NISHANE",
+      "fotos": [
+        "3232401-1.webp",
+        "3232401-2.webp"
+      ]
+    },
+    {
+      "sku": "3233080",
+      "slugOrigem": ".-nishane-hundred-silent-ways-extrait-de-parfum-100ml~3233080",
+      "nome": "NISHANE HUNDRED SILENT WAYS EXTRAIT DE PARFUM 100ML",
+      "marca": "Nishane",
+      "preco": 1789,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2685be2c07554a7b/1721c62fb6f4b089fcfebcc0d8ade762785a39efd7ea92e0.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/b6a11338662a4eef/1721c62fb6f4b089fcfebcc0d8ade762785a39efd7ea92e0.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "NISHANE",
+      "fotos": [
+        "3233080-1.webp",
+        "3233080-2.webp"
+      ]
+    },
+    {
+      "sku": "3233095",
+      "slugOrigem": ".-nishane-hundred-silent-ways-x-extrait-de-parfum-100ml~3233095",
+      "nome": "NISHANE HUNDRED SILENT WAYS X EXTRAIT DE PARFUM 100ML",
+      "marca": "Nishane",
+      "preco": 1299,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/4ac0e912207d4efd/c060beb348f239a9fe2770e36bd7179dacacdd77c4bfe610.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/3f4e70ac9f12449c/c060beb348f239a9fe2770e36bd7179dacacdd77c4bfe610.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "NISHANE",
+      "fotos": [
+        "3233095-1.webp",
+        "3233095-2.webp"
+      ]
+    },
+    {
+      "sku": "16857",
+      "slugOrigem": ".-nishane-hundred-silent-ways-x-extrait-de-parfum-50ml~16857",
+      "nome": "NISHANE HUNDRED SILENT WAYS X EXTRAIT DE PARFUM 50ML",
+      "marca": "Nishane",
+      "preco": 999,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f90729e8424a4b33/6f07f2116ac00f78adf6825ec4d5f341b85b2df0ed3b9560.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/57c10cc02f4f4df1/6f07f2116ac00f78adf6825ec4d5f341b85b2df0ed3b9560.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "NISHANE",
+      "fotos": [
+        "16857-1.webp",
+        "16857-2.webp"
+      ]
+    },
+    {
+      "sku": "3232447",
+      "slugOrigem": ".-nishane-nefs-extrait-50ml~3232447",
+      "nome": "NISHANE NEFS EXTRAIT 50ML",
+      "marca": "Nishane",
+      "preco": 1590,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/c3595010ac0f4423/bb95060efb505209e26711abc39b93792b13951d5dd9fc7c.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/5a68ab1602aa4369/bb95060efb505209e26711abc39b93792b13951d5dd9fc7c.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "NISHANE",
+      "fotos": [
+        "3232447-1.webp",
+        "3232447-2.webp"
+      ]
+    },
+    {
+      "sku": "3232444",
+      "slugOrigem": ".-nishane-vain-e-naive-extrait-50ml~3232444",
+      "nome": "NISHANE VAIN E NAIVE EXTRAIT 50ML",
+      "marca": "Nishane",
+      "preco": 999,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/ab066d3e69ba40f6/cf73ab8e14414301e3ca35e7e96269fd10e74d313a076cf7.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/3a345d81b0ed4607/cf73ab8e14414301e3ca35e7e96269fd10e74d313a076cf7.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "NISHANE",
+      "fotos": [
+        "3232444-1.webp",
+        "3232444-2.webp"
+      ]
+    },
+    {
+      "sku": "17242",
+      "slugOrigem": ".-parfums-de-marly-althair-125-ml~17242",
+      "nome": "PARFUMS DE MARLY ALTHAIR 125 ML",
+      "marca": "Parfums De Marly",
+      "preco": 1590,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/957094d33cb04762/cf4fce2ca02300962e1e9bb92b253a676e586f344331fa70.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a7cd9754d4f4468e/cf4fce2ca02300962e1e9bb92b253a676e586f344331fa70.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": ". PARFUMS DE MARLY ALTHAIR 125 ML",
+      "fotos": [
+        "17242-1.webp",
+        "17242-2.webp"
+      ]
+    },
+    {
+      "sku": "3232393",
+      "slugOrigem": ".-parfums-de-marly-castley-125ml~3232393",
+      "nome": "PARFUMS DE MARLY CASTLEY 125ML",
+      "marca": "Parfums De Marly",
+      "preco": 1750,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/aa1e2db4e0a64604/b8f42d18af50aa8655b301d38e01d894ccd0f27d9e7633ad.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/4e80552fa86f451c/b8f42d18af50aa8655b301d38e01d894ccd0f27d9e7633ad.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": ". PARFUMS DE MARLY CASTLEY 125ML",
+      "fotos": [
+        "3232393-1.webp",
+        "3232393-2.webp"
+      ]
+    },
+    {
+      "sku": "13951",
+      "slugOrigem": ".-parfums-de-marly-delina-75ml~13951",
+      "nome": "PARFUMS DE MARLY DELINA 75ML",
+      "marca": "Parfums De Marly",
+      "preco": 1650,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/47291299de424051/5265a00ad144763490d08170455608f8ca9daa3313c2531d.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/0f8219b9702940ce/5265a00ad144763490d08170455608f8ca9daa3313c2531d.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": ". PARFUMS DE MARLY DELINA 75ML",
+      "fotos": [
+        "13951-1.webp",
+        "13951-2.webp"
+      ]
+    },
+    {
+      "sku": "13952",
+      "slugOrigem": ".-parfums-de-marly-delina-exclusif-75ml~13952",
+      "nome": "PARFUMS DE MARLY DELINA EXCLUSIF 75ML",
+      "marca": "Parfums De Marly",
+      "preco": 1590,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f9acfaa09fe1419e/fd32d662417b00da1c0afbe31e6014ee9cc4441038cd67fe.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/406dd1b229364b72/fd32d662417b00da1c0afbe31e6014ee9cc4441038cd67fe.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": ". PARFUMS DE MARLY DELINA EXCLUSIF 75ML",
+      "fotos": [
+        "13952-1.webp",
+        "13952-2.webp"
+      ]
+    },
+    {
+      "sku": "12061",
+      "slugOrigem": ".-parfums-de-marly-delina-la-rosee-75ml~12061",
+      "nome": "PARFUMS DE MARLY DELINA LA ROSEE 75ML",
+      "marca": "Parfums De Marly",
+      "preco": 1569,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/dcf8ad1d1c3a4f7f/145e1962ce3ca0195c5ff95e21a46dbbb636f07e4ccf3e76.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/5dedad055c5b44db/145e1962ce3ca0195c5ff95e21a46dbbb636f07e4ccf3e76.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": ". PARFUMS DE MARLY DELINA LA ROSEE 75ML",
+      "fotos": [
+        "12061-1.webp",
+        "12061-2.webp"
+      ]
+    },
+    {
+      "sku": "17241",
+      "slugOrigem": ".-parfums-de-marly-pegasus-125-ml~17241",
+      "nome": "PARFUMS DE MARLY PEGASUS 125 ML",
+      "marca": "Parfums De Marly",
+      "preco": 1439,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/b91e3d01337d405d/16c800f79864cf69c5f7bf93be80d2ba170511af7da3d7ec.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/6661863defb043c6/16c800f79864cf69c5f7bf93be80d2ba170511af7da3d7ec.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": ". PARFUMS DE MARLY PEGASUS 125 ML",
+      "fotos": [
+        "17241-1.webp",
+        "17241-2.webp"
+      ]
+    },
+    {
+      "sku": "3233184",
+      "slugOrigem": ".-parfums-de-marly-pegasus-exclusif-parfum-125ml~3233184",
+      "nome": "PARFUMS DE MARLY PEGASUS EXCLUSIF PARFUM 125ML",
+      "marca": "Parfums De Marly",
+      "preco": 1779,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/d6ee10dce3dd440e/8e427d7a74d03000dc20969fd94d09ae9249f8c17449e993.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a6a312aa73a24059/8e427d7a74d03000dc20969fd94d09ae9249f8c17449e993.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": ". PARFUMS DE MARLY PEGASUS EXCLUSIF PARFUM 125ML",
+      "fotos": [
+        "3233184-1.webp",
+        "3233184-2.webp"
+      ]
+    },
+    {
+      "sku": "16409",
+      "slugOrigem": ".-parfums-de-marly-valaya-exclusif-75ml~16409",
+      "nome": "PARFUMS DE MARLY VALAYA EXCLUSIF 75ML",
+      "marca": "Parfums De Marly",
+      "preco": 1890,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2e56b13ef6c541e6/439ad76950722885f93b62292d984b517e2bf3fcf1740c1f.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/88785010d5b94447/439ad76950722885f93b62292d984b517e2bf3fcf1740c1f.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": ". PARFUMS DE MARLY VALAYA EXCLUSIF 75ML",
+      "fotos": [
+        "16409-1.webp",
+        "16409-2.webp"
+      ]
+    },
+    {
+      "sku": "3232446",
+      "slugOrigem": ".-sospiro-dolce-melodia-edp-100ml~3232446",
+      "nome": "SOSPIRO DOLCE MELODIA EDP 100ML",
+      "marca": "Sospiro",
+      "preco": 1249,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/281c02d05f6643b9/7801745c16e51aeb5b7f0e18cc502d48780a36b14e456dd6.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/7675ca09a1064e32/7801745c16e51aeb5b7f0e18cc502d48780a36b14e456dd6.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "SOSPIRO PERFUMES",
+      "fotos": [
+        "3232446-1.webp",
+        "3232446-2.webp"
+      ]
+    },
+    {
+      "sku": "3232963",
+      "slugOrigem": ".-sospiro-vibranna-edp-100ml~3232963",
+      "nome": "SOSPIRO VIBRANNA EDP 100ML",
+      "marca": "Sospiro",
+      "preco": 1469,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/b04719172668445f/b36136aa445515338f5dad9df0ceb08f621b642228763ca9.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/5a2f317e05a84bc9/b36136aa445515338f5dad9df0ceb08f621b642228763ca9.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "SOSPIRO PERFUMES",
+      "fotos": [
+        "3232963-1.webp",
+        "3232963-2.webp"
+      ]
+    },
+    {
+      "sku": "3232947",
+      "slugOrigem": ".-stephane-humbert-lucas-god-of-fire-edp-50ml~3232947",
+      "nome": "STEPHANE HUMBERT LUCAS GOD OF FIRE EDP 50ML",
+      "marca": "Stephane Humbert Lucas",
+      "preco": 1490,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/c1259605fac74572/f5316b8236e16edd62c7991fe6a1cda2a69b858733e8ea1e.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/59e6744a14c34e22/f5316b8236e16edd62c7991fe6a1cda2a69b858733e8ea1e.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "STEPHANE HUMBERT LUCAS",
+      "fotos": [
+        "3232947-1.webp",
+        "3232947-2.webp"
+      ]
+    },
+    {
+      "sku": "3232949",
+      "slugOrigem": ".-stephane-humbert-lucas-pink-boa-edp-50ml~3232949",
+      "nome": "STEPHANE HUMBERT LUCAS PINK BOA EDP 50ML",
+      "marca": "Stephane Humbert Lucas",
+      "preco": 1199,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/73cfa3339f6245d1/ad3dff0a45d6d2ffc5e7f1b89864f31134ef59358c845dcc.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/20ed53b418ea481e/ad3dff0a45d6d2ffc5e7f1b89864f31134ef59358c845dcc.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "STEPHANE HUMBERT LUCAS",
+      "fotos": [
+        "3232949-1.webp",
+        "3232949-2.webp"
+      ]
+    },
+    {
+      "sku": "3233206",
+      "slugOrigem": ".-stephane-humbert-lucas-sand-dance-parfum-50ml~3233206",
+      "nome": "STEPHANE HUMBERT LUCAS SAND DANCE PARFUM 50ML",
+      "marca": "Stephane Humbert Lucas",
+      "preco": 1319,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f144d13268c54196/73744557b975456fe40d7aef1ec050fd99a85605744c1009.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/33608290979f444e/73744557b975456fe40d7aef1ec050fd99a85605744c1009.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "STEPHANE HUMBERT LUCAS",
+      "fotos": [
+        "3233206-1.webp",
+        "3233206-2.webp"
+      ]
+    },
+    {
+      "sku": "3232950",
+      "slugOrigem": ".-stephane-humbert-lucas-venom-incarnat-edp-50ml~3232950",
+      "nome": "STEPHANE HUMBERT LUCAS VENOM INCARNAT EDP 50ML",
+      "marca": "Stephane Humbert Lucas",
+      "preco": 1199,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/1e5b2eac29d74fb8/016e80e704445e4add7025260c6d80c570ede95b944ec612.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/464a89184aab44c6/016e80e704445e4add7025260c6d80c570ede95b944ec612.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "STEPHANE HUMBERT LUCAS",
+      "fotos": [
+        "3232950-1.webp",
+        "3232950-2.webp"
+      ]
+    },
+    {
+      "sku": "3233475",
+      "slugOrigem": ".-tiziana-terenzi-kirke-extrait-de-parfum-100ml~3233475",
+      "nome": "TIZIANA TERENZI KIRKÉ EXTRAIT DE PARFUM 100ML",
+      "marca": "Tiziana Terenzi",
+      "preco": 949,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [],
+      "disponivel": true,
+      "subcategoria": "TIZIANA TERENZI",
+      "fotos": []
+    },
+    {
+      "sku": "3233500",
+      "slugOrigem": ".-tom-ford-oud-wood-edp-100ml~3233500",
+      "nome": "TOM FORD OUD WOOD EDP 100ML",
+      "marca": "Tom Ford",
+      "preco": 1769,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/1c61a3d3ef7341ca/39d9968ff734a18df0a83a504f69dfc691fab31e9daf30e2.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/0aeeb57437f345ee/39d9968ff734a18df0a83a504f69dfc691fab31e9daf30e2.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "TOM FORD",
+      "fotos": [
+        "3233500-1.webp",
+        "3233500-2.webp"
+      ]
+    },
+    {
+      "sku": "3233187",
+      "slugOrigem": ".-tom-ford-tuscan-leather-edp-100ml~3233187",
+      "nome": "TOM FORD TUSCAN LEATHER EDP 100ML",
+      "marca": "Tom Ford",
+      "preco": 1829,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/b44f801e47ed40fb/64d5f240d4aaa79c68b5b388b4efcb6ba7292db4a7bd0345.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/24966e0202a64c2a/64d5f240d4aaa79c68b5b388b4efcb6ba7292db4a7bd0345.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "TOM FORD",
+      "fotos": [
+        "3233187-1.webp",
+        "3233187-2.webp"
+      ]
+    },
+    {
+      "sku": "3233318",
+      "slugOrigem": ".-kit-xerjoff-12-day-advent-calendar-2026~3233318",
+      "nome": "KIT XERJOFF 12-DAY ADVENT CALENDAR 2026",
+      "marca": "Xerjoff",
+      "preco": 3999,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/be5516fa307944bd/f435a3bb8a9a03e469f64be64f8cf9bec956ab10b24a9c66.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f923977061c64846/f435a3bb8a9a03e469f64be64f8cf9bec956ab10b24a9c66.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233318-1.webp",
+        "3233318-2.webp"
+      ]
+    },
+    {
+      "sku": "3233319",
+      "slugOrigem": ".-kit-xerjoff-casamorati-1888-wonderland-carousel-7-to-27~3233319",
+      "nome": "KIT XERJOFF CASAMORATI 1888 WONDERLAND CAROUSEL 7 TO 27",
+      "marca": "Xerjoff",
+      "preco": 2999,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/34a0249d90af45cc/c63fac307f3fd9b3e430818b27b14262c09ec55d27c813c9.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/e20bf29033e4423b/c63fac307f3fd9b3e430818b27b14262c09ec55d27c813c9.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233319-1.webp",
+        "3233319-2.webp"
+      ]
+    },
+    {
+      "sku": "3233295",
+      "slugOrigem": ".-xerjoff-40-knots-edp-50ml~3233295",
+      "nome": "XERJOFF 40 KNOTS EDP 50ML",
+      "marca": "Xerjoff",
+      "preco": 829,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a1f69da13fff4d3e/58300471155650989d48a20ee1db1bee3be33b57d040f9cc.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/a447f6c96a4b4f77/58300471155650989d48a20ee1db1bee3be33b57d040f9cc.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233295-1.webp",
+        "3233295-2.webp"
+      ]
+    },
+    {
+      "sku": "3232912",
+      "slugOrigem": ".-xerjoff-casamorati-1888-lira-100ml~3232912",
+      "nome": "XERJOFF CASAMORATI 1888 LIRA 100ML",
+      "marca": "Xerjoff",
+      "preco": 1129,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/2f7ce5dcabba44cf/f3d40fea3f3ec442072913a920c6ff1ab4f652d0ef9ca407.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/916c17ed5dc34d00/f3d40fea3f3ec442072913a920c6ff1ab4f652d0ef9ca407.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3232912-1.webp",
+        "3232912-2.webp"
+      ]
+    },
+    {
+      "sku": "3233070",
+      "slugOrigem": ".-xerjoff-casamorati-casafutura-100ml~3233070",
+      "nome": "XERJOFF CASAMORATI CASAFUTURA 100ML",
+      "marca": "Xerjoff",
+      "preco": 1099,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/fcd29253db3147fa/75c53784bca5b81318bc456e163b72c0b65cd193cdb6e9d6.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/b100d750db2a45cd/75c53784bca5b81318bc456e163b72c0b65cd193cdb6e9d6.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233070-1.webp",
+        "3233070-2.webp"
+      ]
+    },
+    {
+      "sku": "3233688",
+      "slugOrigem": ".-xerjoff-casamorati-italica-edp-100ml~3233688",
+      "nome": "XERJOFF CASAMORATI ITALICA EDP 100ML",
+      "marca": "Xerjoff",
+      "preco": 1099,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/e0578f0523f24203/542357bb6c6df567e44a1ebff1ea3d1f91bdd9835a61c9c8.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/035674e99d8a4dd8/542357bb6c6df567e44a1ebff1ea3d1f91bdd9835a61c9c8.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233688-1.webp",
+        "3233688-2.webp"
+      ]
+    },
+    {
+      "sku": "3233697",
+      "slugOrigem": ".-xerjoff-casamorati-la-tosca-edp-100ml~3233697",
+      "nome": "XERJOFF CASAMORATI LA TOSCA EDP 100ML",
+      "marca": "Xerjoff",
+      "preco": 1099,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/95bd8b99a5ff4344/ab2a00b13c659183dc344fb3241422cda98cfff732a04569.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/d4c62473c92a4ae3/ab2a00b13c659183dc344fb3241422cda98cfff732a04569.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233697-1.webp",
+        "3233697-2.webp"
+      ]
+    },
+    {
+      "sku": "3233166",
+      "slugOrigem": ".-xerjoff-comandante!-edp-50ml~3233166",
+      "nome": "XERJOFF COMANDANTE! EDP 50ML",
+      "marca": "Xerjoff",
+      "preco": 719,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/8be8d995946c4619/1c91da577a6a97a12a59f147dbf71acd7b33fb3527ff51c4.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/3a67268071e04a4c/1c91da577a6a97a12a59f147dbf71acd7b33fb3527ff51c4.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233166-1.webp",
+        "3233166-2.webp"
+      ]
+    },
+    {
+      "sku": "3233120",
+      "slugOrigem": ".-xerjoff-duran-duran-neorio-fluo-green-parfum-50ml~3233120",
+      "nome": "XERJOFF DURAN DURAN NEORIO FLUO GREEN PARFUM 50ML",
+      "marca": "Xerjoff",
+      "preco": 990,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/03ca96daa6584b6d/812da5c34de56fe8ffc87b2c3bdb23b923ea75999f808274.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/575c16f83e6e4fc4/812da5c34de56fe8ffc87b2c3bdb23b923ea75999f808274.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233120-1.webp",
+        "3233120-2.webp"
+      ]
+    },
+    {
+      "sku": "3233069",
+      "slugOrigem": ".-xerjoff-duran-duran-neorio-fluo-orange-parfum-50ml~3233069",
+      "nome": "XERJOFF DURAN DURAN NEORIO FLUO ORANGE PARFUM 50ML",
+      "marca": "Xerjoff",
+      "preco": 990,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/4e087b9b11a84675/d9dfe9588061050c8b16a0b6700302dca20c03c2ad1a654d.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/0bb538dae4f943d9/d9dfe9588061050c8b16a0b6700302dca20c03c2ad1a654d.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233069-1.webp",
+        "3233069-2.webp"
+      ]
+    },
+    {
+      "sku": "3233118",
+      "slugOrigem": ".-xerjoff-duran-duran-neorio-fluo-yellow-parfum-50ml~3233118",
+      "nome": "XERJOFF DURAN DURAN NEORIO FLUO YELLOW PARFUM 50ML",
+      "marca": "Xerjoff",
+      "preco": 990,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/c26f54610e2149a3/36a97308e06889f279ee6c1c4bdd2cf54e185cfc9983c5f7.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/dd3b920351934c1b/36a97308e06889f279ee6c1c4bdd2cf54e185cfc9983c5f7.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233118-1.webp",
+        "3233118-2.webp"
+      ]
+    },
+    {
+      "sku": "3232627",
+      "slugOrigem": ".-xerjoff-elle-anniversary-50ml~3232627",
+      "nome": "XERJOFF ELLE ANNIVERSARY 50ML",
+      "marca": "Xerjoff",
+      "preco": 1789,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/d868e49b83c44bae/0632c1fba69bbed80d85ee47eb8b2ee711642c545a3fcec1.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/94290de8814e4abf/0632c1fba69bbed80d85ee47eb8b2ee711642c545a3fcec1.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3232627-1.webp",
+        "3232627-2.webp"
+      ]
+    },
+    {
+      "sku": "3233015",
+      "slugOrigem": ".-xerjoff-louis-xv-rose-parfum-50ml~3233015",
+      "nome": "XERJOFF LOUIS XV ROSE PARFUM 50ML",
+      "marca": "Xerjoff",
+      "preco": 1399,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/c6f5edad8d034ab0/2716b3c0e5d0b7997cf3d256392cbe392f1a455416650b48.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/b8c572ff8661455a/2716b3c0e5d0b7997cf3d256392cbe392f1a455416650b48.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233015-1.webp",
+        "3233015-2.webp"
+      ]
+    },
+    {
+      "sku": "3233009",
+      "slugOrigem": ".-xerjoff-muse-edp-50ml~3233009",
+      "nome": "XERJOFF MUSE EDP 50ML",
+      "marca": "Xerjoff",
+      "preco": 889,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/0989dcc53ac24883/f0f124dc6409389fa6d16893811322310e4ee63ca3df1f9d.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/0afffefb25264efb/f0f124dc6409389fa6d16893811322310e4ee63ca3df1f9d.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233009-1.webp",
+        "3233009-2.webp"
+      ]
+    },
+    {
+      "sku": "3233689",
+      "slugOrigem": ".-xerjoff-oud-stars-alexandria-ii-edp-100ml~3233689",
+      "nome": "XERJOFF OUD STARS ALEXANDRIA II EDP 100ML",
+      "marca": "Xerjoff",
+      "preco": 1899,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/1a6ff75321e14ec8/f2a197273b0188fb8146ba91a1e30825b734b21329276d89.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/f9a28ff61f694d09/f2a197273b0188fb8146ba91a1e30825b734b21329276d89.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3233689-1.webp",
+        "3233689-2.webp"
+      ]
+    },
+    {
+      "sku": "3232881",
+      "slugOrigem": ".-xerjoff-renaissance-edp-100ml~3232881",
+      "nome": "XERJOFF RENAISSANCE EDP 100ML",
+      "marca": "Xerjoff",
+      "preco": 1099,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/aa5160202326450c/03b5915b311ca2d55b1747cb4018391dd197efd569707f27.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/7a9c9712407746be/03b5915b311ca2d55b1747cb4018391dd197efd569707f27.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3232881-1.webp",
+        "3232881-2.webp"
+      ]
+    },
+    {
+      "sku": "3232642",
+      "slugOrigem": ".-xerjoff-torino-21-edp-100ml~3232642",
+      "nome": "XERJOFF TORINO 21 EDP 100ML",
+      "marca": "Xerjoff",
+      "preco": 1289,
+      "precoPromo": null,
+      "linha": "nicho",
+      "fotosOrigem": [
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/69810edb84d749bc/372a6111fd42e1bd0df6cfd821d3ff798ebabe77d4c5be05.webp",
+        "https://media-n.atlanticostor.com.br/atlantico/integrations/82129789852b40dc/372a6111fd42e1bd0df6cfd821d3ff798ebabe77d4c5be05.webp"
+      ],
+      "disponivel": true,
+      "subcategoria": "XERJOFF",
+      "fotos": [
+        "3232642-1.webp",
+        "3232642-2.webp"
+      ]
+    }
+  ]
+}

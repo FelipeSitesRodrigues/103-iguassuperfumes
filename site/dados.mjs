@@ -26,11 +26,23 @@ const MARCAS = {
   'GIORGIO ARMANI': 'Giorgio Armani',
   'HUGO BOSS': 'Hugo Boss',
   'PACO RABANNE': 'Paco Rabanne',
-  'RASASI HAWAS': 'Rasasi',
+  // "RASASI HAWAS" não vira alias: Hawas é a linha, fica no nome do perfume
+  RASASI: 'Rasasi',
+  INITIO: 'Initio', 'INITIO PARFUMS PRIVES': 'Initio',
+  BDK: 'BDK Parfums', 'BDK PARFUMS': 'BDK Parfums',
+  'MAISON CRIVELLI': 'Maison Crivelli',
+  'MATIERE PREMIERE': 'Matière Première',
+  'STEPHANE HUMBERT LUCAS': 'Stéphane Humbert Lucas',
+  'TIZIANA TERENZI': 'Tiziana Terenzi',
+  'TOM FORD': 'Tom Ford',
+  'JO MALONE': 'Jo Malone',
+  'FRAGRANCE DU BOIS': 'Fragrance du Bois',
+  'DUCCI GIARDINI DI TOSCANA': 'Giardini di Toscana', 'GIARDINI DI TOSCANA': 'Giardini di Toscana',
+  'SOSPIRO PERFUMES': 'Sospiro', SOSPIRO: 'Sospiro',
   LANCOME: 'Lancôme',
 };
 // palavras que ficam em caixa alta no nome do perfume
-const SIGLAS = new Set(['EDP', 'EDT', 'EDC', 'II', 'III', 'IV', 'VI', 'XX', 'NYC', 'AMG', 'CH', 'CDN', 'UK', 'USA', 'PDRN', 'HB', 'VIP', 'XL', 'NO.', 'X']);
+const SIGLAS = new Set(['EDP', 'EDT', 'EDC', 'II', 'III', 'IV', 'VI', 'XX', 'NYC', 'AMG', 'CH', 'CDN', 'UK', 'USA', 'PDRN', 'HB', 'VIP', 'XL', 'NO.', 'X', 'XV', 'XIV', 'XVI']);
 const MINUSCULAS = new Set(['de', 'du', 'des', 'e', 'et', 'of', 'for', 'in', 'the', 'by', 'and', 'à', 'pour', 'with', 'com']);
 
 const semAcento = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -57,14 +69,18 @@ function marcaDoNome(nome, marcaOrigem, subcategoria, conhecidas) {
   return { marca: MARCAS[reserva?.toUpperCase()] ?? titulo(reserva ?? 'Outras'), resto: nome };
 }
 
+// a referência cadastra algumas linhas como se fossem marca: a marca é só o começo
+const LINHA_NAO_MARCA = new Set(['RASASI HAWAS']);
+
 export function normalizar(bruto) {
   const conhecidas = [...new Set(bruto.flatMap((p) => [p.marca, p.subcategoria]).filter(Boolean).map((m) => m.toUpperCase()))]
-    .filter((m) => !/GEN[EÉ]RICA|LOREAL/.test(m));
+    .filter((m) => !/GEN[EÉ]RICA|LOREAL/.test(m))
+    .filter((m) => !LINHA_NAO_MARCA.has(m));
   const usados = new Set();
   return bruto.map((p) => {
     let nome = p.nome.replace(/\s+/g, ' ').trim();
     let tipo = '';
-    const prefixo = nome.match(/^(KIT|SPRAY CORPORAL|BODY SPRAY)\s+/i);
+    const prefixo = nome.match(/^(KIT|SPRAY CORPORAL|BODY SPRAY|TESTER)\s+/i);
     if (prefixo) { tipo = prefixo[1]; nome = nome.slice(prefixo[0].length); }
     const { marca, resto } = marcaDoNome(nome, p.marca, p.subcategoria, conhecidas);
     let base = resto;
@@ -113,10 +129,18 @@ export const CONFIG_PADRAO = {
 export async function carregarCatalogo() {
   const { SUPABASE_URL: url, SUPABASE_CHAVE_PUBLICA: chave } = process.env;
   if (url && chave && !process.argv.includes('--arquivo')) return doBanco(url, chave);
-  const bruto = JSON.parse(await readFile(join(RAIZ, 'dados', 'catalogo-inicial.json'), 'utf8')).produtos
+  const produtos = await doArquivo();
+  return { produtos, destaques: DESTAQUES, destaquesImportados: DESTAQUES_IMPORTADOS, destaquesNicho: [], config: CONFIG_PADRAO, origem: 'arquivos da carga' };
+}
+
+// Carga raspada da referência: árabes e importados (catalogo-inicial.json) e nicho (catalogo-nicho.json)
+export async function doArquivo() {
+  const ler = async (arq) => {
+    try { return JSON.parse(await readFile(join(RAIZ, 'dados', arq), 'utf8')).produtos; } catch { return []; }
+  };
+  const bruto = [...await ler('catalogo-inicial.json'), ...await ler('catalogo-nicho.json')]
     .filter((p) => !/PROMOCAO SEM PLASTICO/i.test(p.nome)); // item interno da referência, não é perfume
-  const produtos = normalizar(bruto).filter((p) => p.preco > 0).map((p) => ({ ...p, precoDe: null, descricao: '' }));
-  return { produtos, destaques: DESTAQUES, destaquesImportados: DESTAQUES_IMPORTADOS, config: CONFIG_PADRAO, origem: 'catalogo-inicial.json' };
+  return normalizar(bruto).filter((p) => p.preco > 0).map((p) => ({ ...p, precoDe: null, descricao: '' }));
 }
 
 async function doBanco(url, chave) {
@@ -154,6 +178,7 @@ async function doBanco(url, chave) {
     produtos,
     destaques: destaquesDa('arabe'),
     destaquesImportados: destaquesDa('importado'),
+    destaquesNicho: destaquesDa('nicho'),
     config: { ...CONFIG_PADRAO, ...config },
     fotosUrl: `${url}/storage/v1/object/public/perfumes`,
     origem: 'supabase',

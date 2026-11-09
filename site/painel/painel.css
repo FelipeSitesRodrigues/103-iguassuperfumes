@@ -184,6 +184,7 @@ h1, h2 { font-weight: 500; margin: 0; letter-spacing: .01em; }
 /* destaques */
 .destaques { display: grid; gap: 22px; }
 @media (min-width: 900px) { .destaques { grid-template-columns: 1fr 1fr; align-items: start; } }
+@media (min-width: 1200px) { .destaques { grid-template-columns: repeat(3, 1fr); } }
 .destaque-col { background: #fff; border: 1px solid var(--linha); padding: 16px; display: flex; flex-direction: column; gap: 12px; }
 .destaque-col h2 { font-size: 18px; }
 .destaque-col h2 small { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ouro-texto); margin-left: 6px; }

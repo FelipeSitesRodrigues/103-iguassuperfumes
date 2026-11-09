@@ -12,10 +12,15 @@ const SAIDA = join(RAIZ, 'dados');
 const FOTOS = join(SAIDA, 'fotos-originais');
 const BASE = 'https://atlanticostor.com.br';
 const UA = { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36' };
-const CATEGORIAS = [
-  { slug: 'perfume-arabe.44', linha: 'arabe' },
-  { slug: 'perfume-frances.102', linha: 'importado' },
-];
+// --categoria perfumes-de-nicho.476:nicho --saida catalogo-nicho.json  raspa só uma categoria num arquivo à parte
+const argCat = process.argv.find((a, i) => process.argv[i - 1] === '--categoria');
+const CATEGORIAS = argCat
+  ? [{ slug: argCat.split(':')[0], linha: argCat.split(':')[1] }]
+  : [
+    { slug: 'perfume-arabe.44', linha: 'arabe' },
+    { slug: 'perfume-frances.102', linha: 'importado' },
+  ];
+const ARQUIVO = process.argv.find((a, i) => process.argv[i - 1] === '--saida') ?? 'catalogo-inicial.json';
 const semFotos = process.argv.includes('--sem-fotos');
 const espera = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -96,7 +101,7 @@ for (const cat of CATEGORIAS) {
 
 if (process.argv.includes('--so-precos')) {
   // relê só as listagens e atualiza os preços no JSON já raspado, sem abrir cada produto
-  const arq = join(SAIDA, 'catalogo-inicial.json');
+  const arq = join(SAIDA, ARQUIVO);
   const atual = JSON.parse(await readFile(arq, 'utf8'));
   let mudou = 0;
   for (const p of atual.produtos) {
@@ -146,7 +151,7 @@ async function trabalhador() {
 await Promise.all(Array.from({ length: 4 }, trabalhador));
 
 produtos.sort((a, b) => a.linha.localeCompare(b.linha) || (a.marca ?? '').localeCompare(b.marca ?? '') || a.nome.localeCompare(b.nome));
-await writeFile(join(SAIDA, 'catalogo-inicial.json'), JSON.stringify({
+await writeFile(join(SAIDA, ARQUIVO), JSON.stringify({
   origem: BASE, raspadoEm: new Date().toISOString(), total: produtos.length, produtos,
 }, null, 2));
 const resumo = produtos.reduce((a, p) => ((a[p.linha] = (a[p.linha] ?? 0) + 1), a), {});

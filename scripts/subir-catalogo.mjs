@@ -1,19 +1,18 @@
 /**
- * Carga inicial: os 684 perfumes raspados da referência (via site/dados.mjs) e as
- * fotos já preparadas em site/publico/img/p vão pro Supabase.
+ * Carga da referência: árabes, importados e nicho raspados (dados/catalogo-*.json,
+ * via site/dados.mjs) e as fotos já preparadas em site/publico/img/p vão pro Supabase.
  *
  *   node --env-file=.env.local scripts/subir-catalogo.mjs            (dados + fotos)
  *   node --env-file=.env.local scripts/subir-catalogo.mjs --sem-fotos
  *
- * Pode rodar de novo: perfume casa pelo código (o SKU da referência), marca pelo
- * nome, foto pelo caminho, e o upload só manda o arquivo que ainda não está lá.
- * Depois da primeira carga quem manda é o painel: rodar de novo sobrescreve o
- * que o Eduardo tiver mudado nesses perfumes.
+ * Só insere o que falta: perfume que já existe (mesmo código, o SKU da referência),
+ * marca com o mesmo nome e foto com o mesmo caminho ficam como estão. Assim o que
+ * o Eduardo mudou no painel nunca é sobrescrito, e dá pra rodar quantas vezes quiser.
  */
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { createClient } from '@supabase/supabase-js';
-import { carregarCatalogo, DESTAQUES, DESTAQUES_IMPORTADOS } from '../site/dados.mjs';
+import { doArquivo } from '../site/dados.mjs';
 
 const { SUPABASE_URL, SUPABASE_SECRET_KEY } = process.env;
 if (!SUPABASE_URL || !SUPABASE_SECRET_KEY) {
@@ -24,13 +23,13 @@ const db = createClient(SUPABASE_URL, SUPABASE_SECRET_KEY, { auth: { persistSess
 const falhar = (onde, error) => { console.error(`ERRO em ${onde}: ${error.message}`); process.exit(1); };
 const emLotes = (lista, n) => Array.from({ length: Math.ceil(lista.length / n) }, (_, i) => lista.slice(i * n, i * n + n));
 
-const { produtos } = await carregarCatalogo();
+const produtos = await doArquivo();
 console.log(`${produtos.length} perfumes no arquivo`);
 
 // marcas
 const nomesMarcas = [...new Map(produtos.map((p) => [p.marca, p.marcaSlug])).entries()];
 {
-  const { error } = await db.from('marcas').upsert(nomesMarcas.map(([nome, slug]) => ({ nome, slug })), { onConflict: 'nome' });
+  const { error } = await db.from('marcas').upsert(nomesMarcas.map(([nome, slug]) => ({ nome, slug })), { onConflict: 'nome', ignoreDuplicates: true });
   if (error) falhar('marcas', error);
 }
 const { data: marcas, error: e1 } = await db.from('marcas').select('id, nome');
@@ -38,12 +37,15 @@ if (e1) falhar('marcas', e1);
 const marcaId = new Map(marcas.map((m) => [m.nome, m.id]));
 console.log(`${marcas.length} marcas`);
 
-// perfumes
-const ordemDestaque = new Map([
-  ...DESTAQUES.map((c, i) => [c, i + 1]),
-  ...DESTAQUES_IMPORTADOS.map((c, i) => [c, i + 1]),
-]);
-const linhas = produtos.map((p) => ({
+// perfumes novos (o slug não pode bater com o de um perfume que já está no banco)
+const { data: jaNoBanco, error: e0 } = await db.from('perfumes').select('codigo, slug').limit(10000);
+if (e0) falhar('perfumes', e0);
+const codigos = new Set(jaNoBanco.map((p) => p.codigo));
+const slugs = new Set(jaNoBanco.map((p) => p.slug));
+const novos = produtos.filter((p) => !codigos.has(String(p.id).toLowerCase()));
+for (const p of novos) if (slugs.has(p.slug)) p.slug = `${p.slug}-${String(p.id).toLowerCase()}`;
+console.log(`${novos.length} perfumes novos`);
+const linhas = novos.map((p) => ({
   codigo: String(p.id).toLowerCase(),
   slug: p.slug,
   marca_id: marcaId.get(p.marca),
@@ -53,10 +55,9 @@ const linhas = produtos.map((p) => ({
   preco_centavos: Math.round(p.preco * 100),
   disponivel: p.disponivel,
   visivel: true,
-  destaque_ordem: ordemDestaque.get(String(p.id)) ?? null,
 }));
 for (const lote of emLotes(linhas, 200)) {
-  const { error } = await db.from('perfumes').upsert(lote, { onConflict: 'codigo' });
+  const { error } = await db.from('perfumes').upsert(lote, { onConflict: 'codigo', ignoreDuplicates: true });
   if (error) falhar('perfumes', error);
 }
 const { data: noBanco, error: e2 } = await db.from('perfumes').select('id, codigo').limit(5000);
@@ -65,9 +66,9 @@ const perfumeId = new Map(noBanco.map((p) => [p.codigo, p.id]));
 console.log(`${noBanco.length} perfumes no banco`);
 
 // fotos (linhas)
-const fotos = produtos.flatMap((p) => p.fotos.map((caminho, ordem) => ({ perfume_id: perfumeId.get(String(p.id).toLowerCase()), ordem, caminho })));
+const fotos = novos.flatMap((p) => p.fotos.map((caminho, ordem) => ({ perfume_id: perfumeId.get(String(p.id).toLowerCase()), ordem, caminho })));
 for (const lote of emLotes(fotos, 500)) {
-  const { error } = await db.from('perfume_fotos').upsert(lote, { onConflict: 'caminho' });
+  const { error } = await db.from('perfume_fotos').upsert(lote, { onConflict: 'caminho', ignoreDuplicates: true });
   if (error) falhar('fotos', error);
 }
 console.log(`${fotos.length} fotos cadastradas`);

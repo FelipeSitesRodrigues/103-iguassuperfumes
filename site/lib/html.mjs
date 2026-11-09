@@ -63,6 +63,7 @@ function cabecalho(atual) {
     <nav class="topo__nav" aria-label="Principal">
       ${item('/arabes/', 'Árabes', 'arabes')}
       ${item('/importados/', 'Importados', 'importados')}
+      ${item('/nicho/', 'Nicho', 'nicho')}
       ${item('/marcas/', 'Marcas', 'marcas')}
     </nav>
     ${logo('topo__logo')}
@@ -80,6 +81,7 @@ function cabecalho(atual) {
   <nav class="menu-celular" id="menu-celular" aria-label="Menu" hidden>
     <a href="/arabes/">Perfumes árabes</a>
     <a href="/importados/">Perfumes importados</a>
+    <a href="/nicho/">Perfumes de nicho</a>
     <a href="/perfumes/">Todos os perfumes</a>
     <a href="/marcas/">Marcas</a>
     <a href="${linkWhats('Olá, Iguassu! Vim pelo site e queria tirar uma dúvida.')}" target="_blank" rel="noopener">Falar no WhatsApp</a>
@@ -93,11 +95,11 @@ function rodape() {
   <div class="rodape__in">
     <div class="rodape__marca">
       ${logo('rodape__logo')}
-      <p>Perfumes árabes e importados, com pedido direto pelo WhatsApp e atendimento personalizado.</p>
+      <p>Perfumes árabes, importados e de nicho, com pedido direto pelo WhatsApp e atendimento personalizado.</p>
     </div>
     <nav class="rodape__col" aria-label="Catálogo">
       <h2>Catálogo</h2>
-      <a href="/arabes/">Árabes</a><a href="/importados/">Importados</a><a href="/perfumes/">Todos os perfumes</a><a href="/marcas/">Marcas</a>
+      <a href="/arabes/">Árabes</a><a href="/importados/">Importados</a><a href="/nicho/">Nicho</a><a href="/perfumes/">Todos os perfumes</a><a href="/marcas/">Marcas</a>
     </nav>
     <div class="rodape__col">
       <h2>Atendimento</h2>

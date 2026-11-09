@@ -11,7 +11,13 @@ const AQUI = dirname(fileURLToPath(import.meta.url));
 const DIST = join(AQUI, 'dist');
 const POR_PAGINA = 24;
 
-const { produtos, destaques: DESTAQUES, destaquesImportados: DESTAQUES_IMPORTADOS, config, fotosUrl, origem } = await carregarCatalogo();
+const { produtos, destaques: DESTAQUES, destaquesImportados: DESTAQUES_IMPORTADOS, destaquesNicho: DESTAQUES_NICHO = [], config, fotosUrl, origem } = await carregarCatalogo();
+// as três linhas do catálogo
+const LINHAS = {
+  arabe: { codigo: 'a', nome: 'Árabes', url: '/arabes/', singular: 'Perfume árabe', plural: 'Perfumes árabes' },
+  importado: { codigo: 'i', nome: 'Importados', url: '/importados/', singular: 'Perfume importado', plural: 'Perfumes importados' },
+  nicho: { codigo: 'n', nome: 'Nicho', url: '/nicho/', singular: 'Perfume de nicho', plural: 'Perfumes de nicho' },
+};
 LOJA.whatsapp = config.whatsapp;
 LOJA.whatsappExibir = config.whatsapp.replace(/^55(\d{2})(\d{4,5})(\d{4})$/, '($1) $2-$3');
 LOJA.instagram = config.instagram.replace(/^@/, '');
@@ -19,9 +25,10 @@ LOJA.faixaTopo = config.faixa_topo;
 const porId = new Map(produtos.map((p) => [p.id, p]));
 const arabes = produtos.filter((p) => p.linha === 'arabe');
 const importados = produtos.filter((p) => p.linha === 'importado');
+const nicho = produtos.filter((p) => p.linha === 'nicho');
 
 // ordem padrão: destaques primeiro, depois quem tem foto, depois marca e nome
-const peso = new Map([...DESTAQUES, ...DESTAQUES_IMPORTADOS].map((id, i) => [id, i]));
+const peso = new Map([...DESTAQUES, ...DESTAQUES_IMPORTADOS, ...DESTAQUES_NICHO].map((id, i) => [id, i]));
 const ordenar = (lista) => [...lista].sort((a, b) =>
   (peso.get(a.id) ?? 999) - (peso.get(b.id) ?? 999) ||
   (b.fotos.length > 0) - (a.fotos.length > 0) ||
@@ -111,7 +118,7 @@ await writeFile(join(DIST, 'app.js'), js.replace('__WHATS__', LOJA.whatsapp));
 
 // catálogo enxuto pro navegador (busca, filtros e sacola)
 const catalogoJson = produtos.map((p) => ({
-  i: p.id, s: p.slug, l: p.linha === 'arabe' ? 'a' : 'i', m: p.marca, ms: p.marcaSlug, n: p.nome, v: p.volume, p: p.preco, f: p.fotos[0] ?? '', o: p.ordem, ...(p.precoDe ? { d: p.precoDe } : {}), ...(p.disponivel ? {} : { x: 1 }),
+  i: p.id, s: p.slug, l: LINHAS[p.linha].codigo, m: p.marca, ms: p.marcaSlug, n: p.nome, v: p.volume, p: p.preco, f: p.fotos[0] ?? '', o: p.ordem, ...(p.precoDe ? { d: p.precoDe } : {}), ...(p.disponivel ? {} : { x: 1 }),
 }));
 const catalogoTxt = JSON.stringify(catalogoJson);
 const CATALOGO = `/catalogo.json?v=${versao(catalogoTxt)}`;
@@ -131,7 +138,7 @@ const loja = {
   '@context': 'https://schema.org', '@type': 'Store', '@id': `${LOJA.url}/#loja`,
   name: 'Iguassu de Parfum', url: LOJA.url + '/', image: `${LOJA.url}/img/banner-1440.webp`, logo: `${LOJA.url}/favicon.svg`,
   telephone: '+55 45 98811-0629', priceRange: 'R$ 50 a R$ 1.600', currenciesAccepted: 'BRL',
-  description: 'Loja de perfumes árabes e importados com catálogo online e pedido pelo WhatsApp.',
+  description: 'Loja de perfumes árabes, importados e de nicho com catálogo online e pedido pelo WhatsApp.',
 };
 
 const faixa = (titulo, subtitulo, lista, link, id) => `<section class="faixa" aria-labelledby="${id}">
@@ -154,13 +161,14 @@ const faq = [
   ['Preciso criar conta ou pagar pelo site?', 'Não. O site é o nosso catálogo: nenhum pagamento é feito aqui e não precisa de cadastro. O pedido é confirmado no WhatsApp.'],
   ['Como funcionam pagamento e entrega?', 'Pagamento e entrega são combinados no WhatsApp, na hora de confirmar o pedido. A gente passa as opções e o prazo para a sua cidade.'],
   ['O perfume que eu quero está disponível?', 'O catálogo é atualizado pela loja. Antes de fechar, a gente confirma a disponibilidade de cada item no WhatsApp.'],
-  ['Não encontrei o perfume que procuro. E agora?', 'Chama a gente no WhatsApp com o nome do perfume. Trabalhamos com muitas marcas árabes e importadas e podemos ver se conseguimos para você.'],
+  ['Não encontrei o perfume que procuro. E agora?', 'Chama a gente no WhatsApp com o nome do perfume. Trabalhamos com muitas marcas árabes, importadas e de nicho e podemos ver se conseguimos para você.'],
 ];
 const grandesArabes = marcas.filter((m) => m.linhas.has('arabe') && m.total >= 6);
-const grifes = marcas.filter((m) => m.linhas.has('importado') && !m.linhas.has('arabe') && m.total >= 2);
+const grifes = marcas.filter((m) => (m.linhas.has('importado') || m.linhas.has('nicho')) && !m.linhas.has('arabe') && m.total >= 2);
 const marcasFita = grandesArabes.flatMap((m, i) => (grifes[i] ? [m, grifes[i]] : [m]));
 const destaques = DESTAQUES.map((id) => porId.get(id)).filter(Boolean);
 const destImp = DESTAQUES_IMPORTADOS.map((id) => porId.get(id)).filter(Boolean);
+const destNicho = DESTAQUES_NICHO.map((id) => porId.get(id)).filter(Boolean);
 const totalArabes = arabes.length, totalImp = importados.length;
 const home = `
 <section class="hero" aria-labelledby="hero-titulo">
@@ -225,6 +233,8 @@ ${faixa('Os mais pedidos', 'Árabes', destaques, '/arabes/', 'mais-pedidos')}
 
 ${faixa('Importados em destaque', 'Grifes', destImp, '/importados/', 'importados-destaque')}
 
+${destNicho.length ? faixa('Nicho em destaque', 'Alta perfumaria', destNicho, '/nicho/', 'nicho-destaque') : ''}
+
 <section class="passos" id="como-comprar" aria-labelledby="passos-titulo">
   <div class="passos__in">
     <div class="passos__lado">
@@ -239,7 +249,7 @@ ${faixa('Importados em destaque', 'Grifes', destImp, '/importados/', 'importados
     <figure class="conversa">
       <div class="conversa__topo"><span class="conversa__avatar">${SIMBOLO}</span><span><b>Iguassu de Parfum</b><small>online</small></span></div>
       <div class="conversa__corpo">
-        <p class="balao balao--eu"><span>Olá, Iguassu! Quero fazer este pedido pelo site:</span><span class="balao__lista">1x Lattafa Asad 100 ml: R$ 169,00<br>2x French Avenue Vulcan Feu 100 ml: R$ 478,00</span><strong>Total: R$ 647,00</strong><time>14:32 <span aria-hidden="true">✓✓</span></time></p>
+        <p class="balao balao--eu"><span>Olá, Iguassu! Quero fazer este pedido pelo site:</span><span class="balao__lista">1x Lattafa Asad 100 ml: R$ 169,00<br><span class="balao__traco">————————————</span><br>2x French Avenue Vulcan Feu 100 ml: R$ 478,00<br><span class="balao__traco">————————————</span></span><strong>Total: R$ 647,00</strong><time>14:32 <span aria-hidden="true">✓✓</span></time></p>
         <p class="balao balao--loja"><span>Oi! Os dois estão disponíveis. Já te passo as opções de pagamento e o prazo de entrega para a sua cidade.</span><time>14:33</time></p>
       </div>
       <figcaption class="sr">Exemplo de pedido: a sacola chega como mensagem pronta e a loja responde no WhatsApp.</figcaption>
@@ -256,7 +266,7 @@ ${faixa('Importados em destaque', 'Grifes', destImp, '/importados/', 'importados
 
 await gravar('', pagina({
   titulo: 'Iguassu de Parfum | Perfumes árabes e importados',
-  descricao: `Catálogo de perfumes árabes e importados: Lattafa, Maison Alhambra, Armaf, Jean Paul Gaultier e mais ${marcas.length - 4} marcas. Monte a sacola e peça pelo WhatsApp.`,
+  descricao: `Catálogo de perfumes árabes, importados e de nicho: Lattafa, Armaf, Jean Paul Gaultier, Xerjoff e mais ${marcas.length - 4} marcas. Monte a sacola e peça pelo WhatsApp.`,
   caminho: '/',
   conteudo: home,
   css: CSS, js: JS,
@@ -281,11 +291,12 @@ function listagem({ caminho, titulo, h1, intro, lista, linha = '', marca = '', a
       <a href="/perfumes/" class="chip"${linha === '' ? ' aria-current="true"' : ''} data-linha-chip="">Todos</a>
       <a href="/arabes/" class="chip"${linha === 'a' ? ' aria-current="true"' : ''} data-linha-chip="a">Árabes</a>
       <a href="/importados/" class="chip"${linha === 'i' ? ' aria-current="true"' : ''} data-linha-chip="i">Importados</a>
+      <a href="/nicho/" class="chip"${linha === 'n' ? ' aria-current="true"' : ''} data-linha-chip="n">Nicho</a>
     </div>`}
     <div class="filtros__campos">
       <label class="campo campo--busca"><span class="sr">Buscar na lista</span>${ICONES.busca}<input type="search" placeholder="Buscar nesta lista" data-f-busca autocomplete="off"></label>
       ${marca ? '' : `<label class="campo"><span class="sr">Marca</span><select data-f-marca><option value="">Todas as marcas</option>${marcasDaLista.map((m) => `<option value="${m.slug}">${esc(m.nome)} (${m.n})</option>`).join('')}</select></label>`}
-      <label class="campo"><span class="sr">Preço</span><select data-f-preco><option value="">Qualquer preço</option><option value="0-100">Até R$ 100</option><option value="100-200">R$ 100 a R$ 200</option><option value="200-400">R$ 200 a R$ 400</option><option value="400-">Acima de R$ 400</option></select></label>
+      <label class="campo"><span class="sr">Preço</span><select data-f-preco><option value="">Qualquer preço</option><option value="0-100">Até R$ 100</option><option value="100-200">R$ 100 a R$ 200</option><option value="200-400">R$ 200 a R$ 400</option><option value="400-1000">R$ 400 a R$ 1.000</option><option value="1000-">Acima de R$ 1.000</option></select></label>
       <label class="campo"><span class="sr">Ordenar</span><select data-f-ordem><option value="">Mais relevantes</option><option value="menor">Menor preço</option><option value="maior">Maior preço</option><option value="az">Nome, A a Z</option></select></label>
     </div>
   </div>
@@ -307,7 +318,7 @@ function listagem({ caminho, titulo, h1, intro, lista, linha = '', marca = '', a
 
 await listagem({
   caminho: 'perfumes', atual: 'todos', titulo: 'Todos os perfumes | Iguassu de Parfum', h1: 'Todos os perfumes',
-  intro: `${produtos.length} perfumes árabes e importados de ${marcas.length} marcas. Filtre por marca e preço e monte sua sacola.`,
+  intro: `${produtos.length} perfumes árabes, importados e de nicho de ${marcas.length} marcas. Filtre por marca e preço e monte sua sacola.`,
   lista: produtos, migalhas: [['Início', '/'], ['Todos os perfumes', '/perfumes/']],
 });
 await listagem({
@@ -320,6 +331,11 @@ await listagem({
   intro: `${importados.length} perfumes importados de Jean Paul Gaultier, Carolina Herrera, Giorgio Armani, Prada e outras grifes. Peça pelo WhatsApp.`,
   lista: importados, migalhas: [['Início', '/'], ['Perfumes importados', '/importados/']],
 });
+await listagem({
+  caminho: 'nicho', atual: 'nicho', linha: 'n', titulo: 'Perfumes de nicho | Iguassu de Parfum', h1: 'Perfumes de nicho',
+  intro: `${nicho.length} perfumes de nicho de Xerjoff, Creed, Parfums de Marly, Nishane e outras casas de alta perfumaria. Peça pelo WhatsApp.`,
+  lista: nicho, migalhas: [['Início', '/'], ['Perfumes de nicho', '/nicho/']],
+});
 for (const m of marcas) {
   const lista = produtos.filter((p) => p.marcaSlug === m.slug);
   await listagem({
@@ -330,7 +346,7 @@ for (const m of marcas) {
 }
 
 // ---------- página de todas as marcas, separadas por linha ----------
-const gruposMarcas = [['arabe', 'Marcas árabes', 'arabes', 'Perfumes árabes', '/arabes/'], ['importado', 'Marcas importadas', 'importadas', 'Grifes internacionais', '/importados/']].map(([linha, titulo, id, rotulo, link]) => {
+const gruposMarcas = [['arabe', 'Marcas árabes', 'arabes', 'Perfumes árabes', '/arabes/'], ['importado', 'Marcas importadas', 'importadas', 'Grifes internacionais', '/importados/'], ['nicho', 'Marcas de nicho', 'marcas-nicho', 'Alta perfumaria', '/nicho/']].map(([linha, titulo, id, rotulo, link]) => {
   const daLinha = Object.values(produtos.filter((p) => p.linha === linha).reduce((acc, p) => {
     (acc[p.marcaSlug] ??= { nome: p.marca, slug: p.marcaSlug, total: 0 }).total++;
     return acc;
@@ -340,11 +356,11 @@ const gruposMarcas = [['arabe', 'Marcas árabes', 'arabes', 'Perfumes árabes', 
 });
 await gravar('marcas', pagina({
   titulo: 'Marcas de perfume | Iguassu de Parfum', caminho: '/marcas/', atual: 'marcas', css: CSS, js: JS,
-  descricao: `As ${gruposMarcas[0].total} marcas árabes e ${gruposMarcas[1].total} grifes importadas do catálogo da Iguassu de Parfum, de Lattafa a Yves Saint Laurent.`,
+  descricao: `As ${gruposMarcas[0].total} marcas árabes, ${gruposMarcas[1].total} grifes importadas e ${gruposMarcas[2].total} casas de nicho do catálogo da Iguassu de Parfum, de Lattafa a Yves Saint Laurent.`,
   jsonld: [migalha([['Início', '/'], ['Marcas', '/marcas/']])],
   conteudo: `<section class="todas-marcas">
   <nav class="migalha" aria-label="Você está em"><a href="/">Início</a><span aria-hidden="true">/</span><span aria-current="page">Marcas</span></nav>
-  <header class="lista__topo"><h1>Marcas</h1><p>${marcas.length} marcas de perfumes árabes e importados.</p></header>
+  <header class="lista__topo"><h1>Marcas</h1><p>${marcas.length} marcas de perfumes árabes, importados e de nicho.</p></header>
   <nav class="marcas-pular" aria-label="Escolha a linha">${gruposMarcas.map((g) => `<a href="#${g.id}"><b>${g.titulo}</b><span>${g.total} marcas · ${g.perfumes} perfumes</span></a>`).join('')}</nav>
   ${gruposMarcas.map((g) => `<section class="grupo-marcas" id="${g.id}" aria-labelledby="${g.id}-titulo">
     <header class="grupo-marcas__topo"><div><span class="rotulo">${g.rotulo}</span><h2 id="${g.id}-titulo">${g.titulo}</h2></div><a class="link-seta" href="${g.link}">Ver os ${g.perfumes} perfumes ${ICONES.seta}</a></header>
@@ -356,8 +372,8 @@ await gravar('marcas', pagina({
 // ---------- página de cada perfume ----------
 for (const p of produtos) {
   const url = `/perfume/${p.slug}/`;
-  const linhaNome = p.linha === 'arabe' ? 'Perfumes árabes' : 'Perfumes importados';
-  const linhaUrl = p.linha === 'arabe' ? '/arabes/' : '/importados/';
+  const linhaNome = LINHAS[p.linha].plural;
+  const linhaUrl = LINHAS[p.linha].url;
   const parecidos = ordenar(produtos.filter((x) => x.id !== p.id && x.marcaSlug === p.marcaSlug)).slice(0, 8);
   const completa = parecidos.length < 4 ? ordenar(produtos.filter((x) => x.id !== p.id && x.linha === p.linha && x.marcaSlug !== p.marcaSlug)).slice(0, 8 - parecidos.length) : [];
   const nomeTodo = nomeCompleto(p);
@@ -376,7 +392,7 @@ for (const p of produtos) {
     <div class="produto__info">
       <a class="produto__marca rotulo" href="/marca/${p.marcaSlug}/">${esc(p.marca)}</a>
       <h1>${esc(p.nome)}</h1>
-      ${p.volume ? `<p class="produto__vol">${esc(p.volume)} · ${p.linha === 'arabe' ? 'Perfume árabe' : 'Perfume importado'}</p>` : ''}
+      ${p.volume ? `<p class="produto__vol">${esc(p.volume)} · ${LINHAS[p.linha].singular}</p>` : ''}
       <p class="produto__preco">${p.precoDe ? `<s>${preco(p.precoDe)}</s> ` : ''}${preco(p.preco)}</p>
       ${p.disponivel ? '' : '<p class="produto__esgotado">Esgotado no momento. Chame no WhatsApp pra saber quando chega.</p>'}
       <div class="produto__comprar">
@@ -400,7 +416,7 @@ for (const p of produtos) {
 ${parecidos.length + completa.length ? faixa(parecidos.length ? `Mais de ${esc(p.marca)}` : 'Você também pode gostar', parecidos.length ? 'Mesma marca' : linhaNome, [...parecidos, ...completa], parecidos.length ? `/marca/${p.marcaSlug}/` : linhaUrl, 'parecidos') : ''}`;
   await gravar(`perfume/${p.slug}`, pagina({
     titulo: `${nomeTodo} | Iguassu de Parfum`,
-    descricao: `${nomeTodo}, ${p.linha === 'arabe' ? 'perfume árabe' : 'perfume importado'} por ${precoTexto(p.preco)}. Adicione à sacola e peça pelo WhatsApp na Iguassu de Parfum.`,
+    descricao: `${nomeTodo}, ${LINHAS[p.linha].singular.toLowerCase()} por ${precoTexto(p.preco)}. Adicione à sacola e peça pelo WhatsApp na Iguassu de Parfum.`,
     caminho: url, conteudo, css: CSS, js: JS,
     ogImagem: p.fotos[0] ? `/img/p/${p.fotos[0]}-800.webp` : undefined,
     preload: p.fotos[0] ? `<link rel="preload" as="image" href="/img/p/${p.fotos[0]}-800.webp" imagesrcset="/img/p/${p.fotos[0]}-400.webp 400w, /img/p/${p.fotos[0]}-800.webp 800w" imagesizes="(min-width: 900px) 600px, 100vw" fetchpriority="high">` : '',
@@ -409,7 +425,7 @@ ${parecidos.length + completa.length ? faixa(parecidos.length ? `Mais de ${esc(p
         '@context': 'https://schema.org', '@type': 'Product', name: nomeTodo, sku: p.id,
         brand: { '@type': 'Brand', name: p.marca },
         image: p.fotos.map((f) => `${LOJA.url}/img/p/${f}-800.webp`),
-        category: p.linha === 'arabe' ? 'Perfume árabe' : 'Perfume importado',
+        category: LINHAS[p.linha].singular,
         offers: { '@type': 'Offer', url: LOJA.url + url, priceCurrency: 'BRL', price: p.preco.toFixed(2), availability: p.disponivel ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock', seller: { '@id': `${LOJA.url}/#loja` } },
       },
       migalha([['Início', '/'], [linhaNome, linhaUrl], [p.marca, `/marca/${p.marcaSlug}/`], [nomeTodo, url]]),
@@ -429,12 +445,12 @@ await writeFile(join(DIST, '404.html'), pagina({
     <input id="busca-404" name="busca" type="search" placeholder="Nome do perfume ou marca" autocomplete="off">
     <button class="btn btn--escuro" type="submit">${ICONES.busca}<span>Buscar</span></button>
   </form>
-  <nav class="nao-achou__atalhos" aria-label="Atalhos"><a href="/arabes/">Árabes</a><a href="/importados/">Importados</a><a href="/marcas/">Marcas</a><a href="${linkWhats('Olá, Iguassu! Vim pelo site e não achei um perfume.')}" target="_blank" rel="noopener">Perguntar no WhatsApp</a></nav>
+  <nav class="nao-achou__atalhos" aria-label="Atalhos"><a href="/arabes/">Árabes</a><a href="/importados/">Importados</a><a href="/nicho/">Nicho</a><a href="/marcas/">Marcas</a><a href="${linkWhats('Olá, Iguassu! Vim pelo site e não achei um perfume.')}" target="_blank" rel="noopener">Perguntar no WhatsApp</a></nav>
 </section>
 ${faixa('Enquanto isso, os mais pedidos', 'Árabes', destaques, '/arabes/', 'mais-pedidos-404')}`,
 }).replace(/data-catalogo=""/g, `data-catalogo="${CATALOGO}"`));
 
-const urls = ['/', '/perfumes/', '/arabes/', '/importados/', '/marcas/', ...marcas.map((m) => `/marca/${m.slug}/`), ...produtos.map((p) => `/perfume/${p.slug}/`)];
+const urls = ['/', '/perfumes/', '/arabes/', '/importados/', '/nicho/', '/marcas/', ...marcas.map((m) => `/marca/${m.slug}/`), ...produtos.map((p) => `/perfume/${p.slug}/`)];
 const hoje = new Date().toISOString().slice(0, 10);
 await writeFile(join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${LOJA.url}${u}</loc><lastmod>${hoje}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 await writeFile(join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /painel/\n\nSitemap: ${LOJA.url}/sitemap.xml\n`);

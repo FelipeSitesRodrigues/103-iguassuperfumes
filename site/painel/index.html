@@ -55,6 +55,7 @@
         <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
         <button type="button" data-filtro="arabe" aria-pressed="false">Árabes</button>
         <button type="button" data-filtro="importado" aria-pressed="false">Importados</button>
+        <button type="button" data-filtro="nicho" aria-pressed="false">Nicho</button>
         <button type="button" data-filtro="esgotado" aria-pressed="false">Esgotados</button>
         <button type="button" data-filtro="oculto" aria-pressed="false">Ocultos</button>
         <button type="button" data-filtro="semfoto" aria-pressed="false">Sem foto</button>
@@ -69,7 +70,7 @@
     <div class="secao__topo">
       <div>
         <h1>Destaques da home</h1>
-        <p class="secao__sub">A ordem daqui é a ordem das faixas "Os mais pedidos" e "Importados em destaque".</p>
+        <p class="secao__sub">A ordem daqui é a ordem das faixas "Os mais pedidos", "Importados em destaque" e "Nicho em destaque".</p>
       </div>
       <button class="botao botao--cheio" type="button" id="salvar-destaques" disabled>Salvar ordem</button>
     </div>
@@ -84,6 +85,12 @@
         <h2>Importados em destaque <small>grifes</small></h2>
         <ol class="ordem"></ol>
         <label class="busca-painel busca-painel--add"><span class="sr">Adicionar importado</span><input type="search" placeholder="+ Adicionar importado" autocomplete="off"></label>
+        <ul class="sugestoes"></ul>
+      </div>
+      <div class="destaque-col" data-linha="nicho">
+        <h2>Nicho em destaque <small>alta perfumaria</small></h2>
+        <ol class="ordem"></ol>
+        <label class="busca-painel busca-painel--add"><span class="sr">Adicionar perfume de nicho</span><input type="search" placeholder="+ Adicionar perfume de nicho" autocomplete="off"></label>
         <ul class="sugestoes"></ul>
       </div>
     </div>
@@ -150,7 +157,7 @@
       <label class="campo"><span>Nome do perfume</span><input name="nome" maxlength="120" required autocomplete="off" placeholder="Ex.: Asad"><small>Sem a marca e sem o volume: eles já aparecem juntos no site.</small></label>
       <div class="grade-2">
         <label class="campo"><span>Linha</span>
-          <select name="linha" required><option value="arabe">Árabe</option><option value="importado">Importado</option></select>
+          <select name="linha" required><option value="arabe">Árabe</option><option value="importado">Importado</option><option value="nicho">Nicho</option></select>
         </label>
         <label class="campo"><span>Volume</span><input name="volume" maxlength="20" placeholder="100 ml" autocomplete="off"></label>
       </div>

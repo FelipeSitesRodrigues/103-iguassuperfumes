@@ -129,7 +129,7 @@ function filtrados() {
   return estado.perfumes
     .filter((p) => {
       switch (estado.filtro) {
-        case 'arabe': case 'importado': return p.linha === estado.filtro;
+        case 'arabe': case 'importado': case 'nicho': return p.linha === estado.filtro;
         case 'esgotado': return !p.disponivel;
         case 'oculto': return !p.visivel;
         case 'semfoto': return p.fotos.length === 0;
@@ -151,7 +151,7 @@ function itemHtml(p) {
   return `<li class="item${p.visivel ? '' : ' item--oculto'}" data-id="${p.id}">
   <button class="item__abrir" type="button" data-abrir>
     <span class="item__foto">${capa ? `<img src="${fotoUrl(capa)}" alt="" loading="lazy" decoding="async" width="56" height="56">` : '<span class="item__semfoto">sem foto</span>'}</span>
-    <span class="item__txt"><small>${esc(marcaDe(p.marca_id)?.nome)}</small><b>${esc(p.nome)}</b><span>${esc(p.volume)}${p.volume ? ' · ' : ''}${p.linha === 'arabe' ? 'Árabe' : 'Importado'}</span>${selos ? `<span class="item__selos">${selos}</span>` : ''}</span>
+    <span class="item__txt"><small>${esc(marcaDe(p.marca_id)?.nome)}</small><b>${esc(p.nome)}</b><span>${esc(p.volume)}${p.volume ? ' · ' : ''}${{ arabe: 'Árabe', importado: 'Importado', nicho: 'Nicho' }[p.linha]}</span>${selos ? `<span class="item__selos">${selos}</span>` : ''}</span>
     <span class="item__preco">${p.promo_centavos ? `<s>${real(p.preco_centavos)}</s>${real(p.promo_centavos)}` : real(p.preco_centavos)}</span>
   </button>
   <label class="chave chave--mini" title="Disponível"><input type="checkbox" data-disponivel${p.disponivel ? ' checked' : ''}><span class="chave__trilho" aria-hidden="true"></span><span class="sr">Disponível</span></label>
@@ -451,9 +451,9 @@ $('#excluir').addEventListener('click', async () => {
 });
 
 // ---------- destaques ----------
-const ordemDestaque = { arabe: [], importado: [] };
+const ordemDestaque = { arabe: [], importado: [], nicho: [] };
 function desenharDestaques(recarregar = true) {
-  for (const linha of ['arabe', 'importado']) {
+  for (const linha of ['arabe', 'importado', 'nicho']) {
     if (recarregar) {
       ordemDestaque[linha] = estado.perfumes.filter((p) => p.linha === linha && p.destaque_ordem)
         .sort((a, b) => a.destaque_ordem - b.destaque_ordem).map((p) => p.id);
@@ -509,7 +509,7 @@ $('#salvar-destaques').addEventListener('click', async (e) => {
   botao.textContent = 'Salvando…';
   try {
     const nova = new Map();
-    for (const linha of ['arabe', 'importado']) ordemDestaque[linha].forEach((id, i) => nova.set(id, Math.min(99, i + 1)));
+    for (const linha of ['arabe', 'importado', 'nicho']) ordemDestaque[linha].forEach((id, i) => nova.set(id, Math.min(99, i + 1)));
     const mudar = estado.perfumes.filter((p) => (nova.get(p.id) ?? null) !== (p.destaque_ordem ?? null));
     for (const p of mudar) {
       const { error } = await sb.from('perfumes').update({ destaque_ordem: nova.get(p.id) ?? null }).eq('id', p.id);

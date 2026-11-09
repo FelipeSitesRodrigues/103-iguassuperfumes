@@ -457,7 +457,7 @@ svg.ico-cheio { fill: currentColor; stroke: none; }
 
 .todas-marcas .letra { display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 20px 0; border-top: 1px solid var(--linha); }
 .todas-marcas .letra h3 { font-size: 30px; font-weight: 300; color: var(--ouro-texto); line-height: 1.1; }
-.marcas-pular { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 8px; }
+.marcas-pular { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 4px 0 8px; }
 .marcas-pular a { display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; background: var(--preto); color: #fff; transition: background-color .25s var(--ease); }
 .marcas-pular a:hover { background: #2a2622; }
 .marcas-pular b { font-weight: 400; font-size: 20px; }
@@ -550,3 +550,4 @@ main > .faixa, .marcas, .passos, .duvidas, .rodape { content-visibility: auto; c
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+.balao__traco { color: #8a9a8e; letter-spacing: -.05em; }
