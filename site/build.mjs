@@ -329,18 +329,27 @@ for (const m of marcas) {
   });
 }
 
-// ---------- página de todas as marcas ----------
-const porLetra = marcas.slice().sort((a, b) => a.nome.localeCompare(b.nome, 'pt')).reduce((acc, m) => {
-  const l = m.nome[0].toUpperCase(); (acc[l] ??= []).push(m); return acc;
-}, {});
+// ---------- página de todas as marcas, separadas por linha ----------
+const gruposMarcas = [['arabe', 'Marcas árabes', 'arabes', 'Perfumes árabes', '/arabes/'], ['importado', 'Marcas importadas', 'importadas', 'Grifes internacionais', '/importados/']].map(([linha, titulo, id, rotulo, link]) => {
+  const daLinha = Object.values(produtos.filter((p) => p.linha === linha).reduce((acc, p) => {
+    (acc[p.marcaSlug] ??= { nome: p.marca, slug: p.marcaSlug, total: 0 }).total++;
+    return acc;
+  }, {})).sort((a, b) => a.nome.localeCompare(b.nome, 'pt'));
+  const porLetra = daLinha.reduce((acc, m) => { (acc[m.nome[0].toUpperCase()] ??= []).push(m); return acc; }, {});
+  return { titulo, id, rotulo, link, total: daLinha.length, perfumes: daLinha.reduce((t, m) => t + m.total, 0), porLetra };
+});
 await gravar('marcas', pagina({
   titulo: 'Marcas de perfume | Iguassu de Parfum', caminho: '/marcas/', atual: 'marcas', css: CSS, js: JS,
-  descricao: `As ${marcas.length} marcas de perfumes árabes e importados do catálogo da Iguassu de Parfum, de Lattafa a Yves Saint Laurent.`,
+  descricao: `As ${gruposMarcas[0].total} marcas árabes e ${gruposMarcas[1].total} grifes importadas do catálogo da Iguassu de Parfum, de Lattafa a Yves Saint Laurent.`,
   jsonld: [migalha([['Início', '/'], ['Marcas', '/marcas/']])],
   conteudo: `<section class="todas-marcas">
   <nav class="migalha" aria-label="Você está em"><a href="/">Início</a><span aria-hidden="true">/</span><span aria-current="page">Marcas</span></nav>
   <header class="lista__topo"><h1>Marcas</h1><p>${marcas.length} marcas de perfumes árabes e importados.</p></header>
-  ${Object.entries(porLetra).map(([l, ms]) => `<div class="letra"><h2>${l}</h2><ul>${ms.map((m) => `<li><a href="/marca/${m.slug}/">${esc(m.nome)} <small>${m.total}</small></a></li>`).join('')}</ul></div>`).join('\n  ')}
+  <nav class="marcas-pular" aria-label="Escolha a linha">${gruposMarcas.map((g) => `<a href="#${g.id}"><b>${g.titulo}</b><span>${g.total} marcas · ${g.perfumes} perfumes</span></a>`).join('')}</nav>
+  ${gruposMarcas.map((g) => `<section class="grupo-marcas" id="${g.id}" aria-labelledby="${g.id}-titulo">
+    <header class="grupo-marcas__topo"><div><span class="rotulo">${g.rotulo}</span><h2 id="${g.id}-titulo">${g.titulo}</h2></div><a class="link-seta" href="${g.link}">Ver os ${g.perfumes} perfumes ${ICONES.seta}</a></header>
+    ${Object.entries(g.porLetra).map(([l, ms]) => `<div class="letra"><h3>${l}</h3><ul>${ms.map((m) => `<li><a href="/marca/${m.slug}/">${esc(m.nome)} <small>${m.total}</small></a></li>`).join('')}</ul></div>`).join('\n    ')}
+  </section>`).join('\n  ')}
 </section>`,
 }));
 

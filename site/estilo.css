@@ -456,11 +456,30 @@ svg.ico-cheio { fill: currentColor; stroke: none; }
 .lista__vazia[hidden] { display: none; }
 
 .todas-marcas .letra { display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 20px 0; border-top: 1px solid var(--linha); }
-.todas-marcas h2 { font-size: 30px; font-weight: 300; color: var(--ouro-texto); }
+.todas-marcas .letra h3 { font-size: 30px; font-weight: 300; color: var(--ouro-texto); line-height: 1.1; }
+.marcas-pular { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 8px; }
+.marcas-pular a { display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; background: var(--preto); color: #fff; transition: background-color .25s var(--ease); }
+.marcas-pular a:hover { background: #2a2622; }
+.marcas-pular b { font-weight: 400; font-size: 20px; }
+.marcas-pular span { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ouro-claro); }
+.grupo-marcas { padding-top: 48px; scroll-margin-top: 90px; }
+.grupo-marcas__topo { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-bottom: 18px; }
+.grupo-marcas__topo h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 300; margin-top: 6px; }
+@media (max-width: 600px) {
+  .marcas-pular { grid-template-columns: 1fr; gap: 8px; }
+  .marcas-pular a { padding: 14px 16px; }
+  .marcas-pular b { font-size: 18px; }
+  .grupo-marcas { padding-top: 36px; }
+}
 .todas-marcas ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 4px 20px; }
 .todas-marcas li a { display: inline-block; padding: 8px 0; font-size: 16px; }
 .todas-marcas li a:hover { color: var(--ouro-texto); }
 .todas-marcas small { color: var(--tinta-2); margin-left: 4px; }
+@media (max-width: 600px) {
+  .todas-marcas .letra { grid-template-columns: 34px 1fr; }
+  .todas-marcas ul { grid-template-columns: 1fr 1fr; gap: 0 12px; }
+  .todas-marcas li a { font-size: 15px; }
+}
 
 /* ---------- produto ---------- */
 .produto { max-width: var(--largura); margin: 0 auto; padding: 20px var(--borda-in) 24px; }
