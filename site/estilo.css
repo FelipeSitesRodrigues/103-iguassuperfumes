@@ -218,10 +218,13 @@ svg.ico-cheio { fill: currentColor; stroke: none; }
   .linha__desc { font-size: 13.5px; }
 }
 @media (min-width: 900px) {
-  .linhas { grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
-  .linha { aspect-ratio: auto; height: clamp(340px, 26vw, 400px); }
-  .linha img { object-position: 70% 55%; }
-  .linha__txt { padding: 36px 40px; width: 62%; }
+  /* três linhas lado a lado: card em pé, texto embaixo sobre a sombra que sobe do pé */
+  .linhas { grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+  .linha { aspect-ratio: 4 / 5; max-height: 540px; }
+  .linha img { position: absolute; left: 0; top: 0; height: 80%; object-position: 50% 40%; }
+  .linha::after { background: linear-gradient(0deg, #080706 0%, #080706 22%, rgba(8, 7, 6, .75) 34%, rgba(8, 7, 6, 0) 52%); }
+  .linha__txt { top: auto; width: 100%; padding: 28px 30px 30px; }
+  .linha__nome { font-size: clamp(34px, 3.2vw, 46px); }
 }
 
 /* ---------- faixas de produto: carrossel que vai até a borda da tela ---------- */

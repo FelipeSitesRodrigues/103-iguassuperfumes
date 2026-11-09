@@ -199,7 +199,7 @@ const home = `
 
 <section class="linhas" aria-label="Linhas">
   <a class="linha" href="/arabes/">
-    <img src="/img/capa-arabes-520.webp" srcset="/img/capa-arabes-520.webp 520w, /img/capa-arabes-800.webp 800w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="800" alt="Perfumes árabes Afnan 9PM Elixir e Lattafa Badee Al Oud Amethyst" loading="lazy" decoding="async">
+    <img src="/img/capa-arabes-520.webp" srcset="/img/capa-arabes-520.webp 520w, /img/capa-arabes-800.webp 800w" sizes="(min-width: 900px) 33vw, 100vw" width="800" height="800" alt="Perfumes árabes Afnan 9PM Elixir e Lattafa Badee Al Oud Amethyst" loading="lazy" decoding="async">
     <span class="linha__txt">
       <span class="rotulo rotulo--ouro">${totalArabes} perfumes</span>
       <span class="linha__nome">Árabes</span>
@@ -208,11 +208,20 @@ const home = `
     </span>
   </a>
   <a class="linha" href="/importados/">
-    <img src="/img/capa-importados-520.webp" srcset="/img/capa-importados-520.webp 520w, /img/capa-importados-800.webp 800w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="800" alt="Perfumes importados Jean Paul Gaultier Le Male e Carolina Herrera Good Girl" loading="lazy" decoding="async">
+    <img src="/img/capa-importados-520.webp" srcset="/img/capa-importados-520.webp 520w, /img/capa-importados-800.webp 800w" sizes="(min-width: 900px) 33vw, 100vw" width="800" height="800" alt="Perfumes importados Jean Paul Gaultier Le Male e Carolina Herrera Good Girl" loading="lazy" decoding="async">
     <span class="linha__txt">
       <span class="rotulo rotulo--ouro">${totalImp} perfumes</span>
       <span class="linha__nome">Importados</span>
       <span class="linha__desc">Os clássicos das grandes grifes, de Paris a Nova York.</span>
+      <span class="link-seta">Ver a linha ${ICONES.seta}</span>
+    </span>
+  </a>
+  <a class="linha" href="/nicho/">
+    <img src="/img/capa-nicho-520.webp" srcset="/img/capa-nicho-520.webp 520w, /img/capa-nicho-800.webp 800w" sizes="(min-width: 900px) 33vw, 100vw" width="800" height="800" alt="Perfumes de nicho Creed Aventus e Parfums de Marly Delina sobre pedra escura" loading="lazy" decoding="async">
+    <span class="linha__txt">
+      <span class="rotulo rotulo--ouro">${nicho.length} perfumes</span>
+      <span class="linha__nome">Nicho</span>
+      <span class="linha__desc">Alta perfumaria de Xerjoff, Creed, Parfums de Marly e Nishane.</span>
       <span class="link-seta">Ver a linha ${ICONES.seta}</span>
     </span>
   </a>
