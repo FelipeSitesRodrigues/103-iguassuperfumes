@@ -614,12 +614,12 @@ const haQuanto = (iso) => {
   return new Date(iso).toLocaleDateString('pt-BR');
 };
 async function lerPublicacao() {
-  const { data } = await sb.from('site_publicacao').select('status,pendente,publicado_em,erro').maybeSingle();
+  const { data } = await sb.from('site_publicacao').select('status,pendente,forcar,disparado_em,publicado_em,erro').maybeSingle();
   const s = $('#status');
   if (!data) return;
   const txt = {
     em_dia: data.publicado_em ? `Site em dia · ${haQuanto(data.publicado_em)}` : 'Site em dia',
-    aguardando: 'Atualizando o site…',
+    aguardando: data.forcar ? 'Publicando em instantes…' : 'Mudanças na fila',
     publicando: 'Atualizando o site…',
     falhou: 'O site não atualizou',
     sem_hook: 'Atualização automática desligada',
@@ -627,7 +627,8 @@ async function lerPublicacao() {
   }[data.status] ?? data.status;
   s.dataset.estado = data.status;
   $('.status__txt', s).textContent = txt;
-  s.title = data.erro ?? (data.status === 'sem_hook' ? 'As mudanças ficam salvas no banco e entram no site quando a publicação automática for ligada.' : 'As mudanças entram no site em 1 a 2 minutos.');
+  s.title = data.erro ?? (data.status === 'sem_hook' ? 'As mudanças ficam salvas no banco e entram no site quando a publicação automática for ligada.' : 'As mudanças entram no site sozinhas 10 minutos depois da última edição (no máximo uma atualização a cada 30 minutos). Pra ver na hora, use "Publicar agora".');
+  $('#publicar').hidden = !(data.pendente && !data.forcar && ['aguardando', 'em_dia'].includes(data.status));
   return data;
 }
 function acompanharPublicacao() {
@@ -641,5 +642,14 @@ function publicacaoMudou() {
   setTimeout(acompanharPublicacao, 800);
 }
 $('#status').addEventListener('click', () => avisar($('#status').title));
+$('#publicar').addEventListener('click', async () => {
+  const b = $('#publicar');
+  b.disabled = true;
+  const { error } = await sb.rpc('publicar_agora');
+  b.disabled = false;
+  if (error) return avisar(mensagemErro(error), 'erro');
+  avisar('O site atualiza em 2 a 3 minutos.');
+  publicacaoMudou();
+});
 
 iniciar().catch((e) => avisar(mensagemErro(e), 'erro'));

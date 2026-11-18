@@ -95,9 +95,14 @@ h1, h2 { font-weight: 500; margin: 0; letter-spacing: .01em; }
 .status[data-estado="aguardando"] .status__ponto, .status[data-estado="publicando"] .status__ponto { background: var(--ouro); animation: pulsa 1.2s ease-in-out infinite; }
 .status[data-estado="falhou"] .status__ponto, .status[data-estado="teto_diario"] .status__ponto { background: #f04438; }
 @keyframes pulsa { 50% { opacity: .3; } }
+.publicar { padding: 6px 14px; border-radius: 20px; background: var(--ouro); color: var(--preto); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+.publicar:hover { background: #b3a078; }
+.publicar:disabled { opacity: .5; }
+.publicar[hidden] { display: none; }
 @media (max-width: 640px) {
   .barra { flex-wrap: wrap; row-gap: 8px; }
   .status { order: 3; width: 100%; justify-content: center; }
+  .publicar { order: 4; width: 100%; padding: 10px 14px; }
 }
 
 /* abas */
